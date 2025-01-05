@@ -22,7 +22,7 @@ export default function About() {
         <h2 className="mt-8 text-3xl font-semibold text-white">Hey, I&apos;m Rudra Sankha👋</h2>
         <p className="mt-4 max-w-3xl text-muted-foreground text-lg">
           I&apos;m a fullstack developer 🚀, optimist 🌟, and an open-source advocate 🌱. I&apos;m
-          currently I am learning Web3  & building Projects on it 
+          currently  learning Web3  & building Projects on it 
           and contributing to multiple open-source projects.
         </p>
 
