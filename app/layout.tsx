@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ColorGlow from "@/components/ui/GlowEffect";
+import { FloatingNav } from "@/components/floating-nav";
+import ThemeProvider from "@/components/setTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+          <ColorGlow/>
+          <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
+          <ThemeProvider>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );

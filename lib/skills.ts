@@ -1,0 +1,17 @@
+export const skills = [
+  "React Js",
+  "Next Js",
+  "Tailwind Css",
+  "Node.js",
+  "Express Js",
+  "Mongo DB",
+  "Prisma",
+  "PostgreSQL",
+  "Gemini API",
+  "AWS",
+  "Docker",
+  "CI/CD",
+  "Turborepo",
+  "Supabase Vector DB",
+  "Solana",
+];
