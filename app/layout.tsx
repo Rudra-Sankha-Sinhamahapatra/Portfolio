@@ -4,6 +4,8 @@ import "./globals.css";
 import ColorGlow from "@/components/ui/GlowEffect";
 import { FloatingNav } from "@/components/floating-nav";
 import ThemeProvider from "@/components/setTheme";
+import SpaceWarpCanvas from "@/components/SpaceWrapCanvas";
+import CometCanvas from "@/components/CometCanvas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +32,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SpaceWarpCanvas/>
+        <CometCanvas/>
           <ColorGlow/>
           <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
           <ThemeProvider>
