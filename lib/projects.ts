@@ -20,5 +20,11 @@ export interface Project {
       link: "https://github.com/axatbhardwaj/bodhi",
       techStacks: ["Ethereum", "Wagmi", "Turborepo", "Next Js","React Js","Tailwind Css","Node Js","Gemini","Solidity","Prisma","PostgreSQL"],
     },
+    {
+      title:"Wiz",
+      description:"Wiz is a chat application built using web sockets and next js,Users can create or join a room to initiate chatting",
+      link:"https://github.com/Rudra-Sankha-Sinhamahapatra/Wiz",
+      techStacks:["Web Sockets","Node.js","Next Js","React Js","Tailwind Css"]
+    }
   ];
   
