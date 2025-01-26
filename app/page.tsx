@@ -2,6 +2,7 @@
 'use client';
 
 import About from '@/components/sections/About';
+import Experience from '@/components/sections/Experience';
 import Projects from '@/components/sections/Projects';
 import { Skills } from '@/components/sections/Skills';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
+      <Experience/>
       </div>
     </main>
   );
