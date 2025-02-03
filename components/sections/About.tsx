@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter, Linkedin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function About() {
@@ -42,6 +42,11 @@ export default function About() {
              window.open('https://www.linkedin.com/in/rudra-sankha-sinhamahapatra-6311aa1bb/','_blank')
           }}>
             <Linkedin className="h-6 w-6 text-primary hover:text-secondary transition-colors" />
+          </Button>
+          <Button variant="outline" size="icon" aria-label="Resume" onClick={()=>{
+             window.open('https://drive.google.com/file/d/1Ywfqe1PVMf1_gLw-QVgYQnsg-8vgXb0q/view?usp=drive_link','_blank')
+          }}>
+            <FileText className="h-6 w-6 text-primary hover:text-secondary transition-colors" />
           </Button>
         </div>
       </section>
