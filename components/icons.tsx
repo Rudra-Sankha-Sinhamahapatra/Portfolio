@@ -1,4 +1,5 @@
 import {
+  FileText,
   LucideProps,
   Moon,
   SunMedium,
@@ -67,4 +68,5 @@ export const Icons = {
       <path d="M16 16v-3a2 2 0 0 0 -4 0" />{" "}
     </svg>
   ),
+  resume: (props: LucideProps) => <FileText {...props} />, 
 }

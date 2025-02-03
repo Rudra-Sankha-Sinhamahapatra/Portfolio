@@ -126,6 +126,30 @@ export function FloatingNav({ addClass }: {addClass:string}) {
                 <span className="sr-only">Linkedin</span>
               </motion.div>
             </Link>
+            <Link
+              onMouseEnter={() => changeScale(1.2)}
+              onMouseLeave={() => changeScale(1.1)}
+              href={siteConfig.links.resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <motion.div
+                initial="initial"
+                whileHover="hover"
+                animate="initial"
+                variants={{
+                  initial: { scale: 1 },
+                  hover: { scale: 1.2 },
+                  exit: { scale: 1 }
+                }}
+                className={
+                  "p-2 rounded-full hover:bg-transparent-white transition-all dark:hover:text-neutral-200 flex align-middle"
+                }
+              >
+                <Icons.resume className="h-5 w-5" />
+                <span className="sr-only">Resume</span>
+              </motion.div>
+            </Link>
             {/* <ThemeToggle /> */}
           </nav>
         </div>
