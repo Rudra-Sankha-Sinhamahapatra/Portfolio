@@ -7,6 +7,7 @@ import ThemeProvider from "@/components/setTheme";
 import SpaceWarpCanvas from "@/components/SpaceWrapCanvas";
 import CometCanvas from "@/components/CometCanvas";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,6 +98,7 @@ export default function RootLayout({
         <ColorGlow />
         <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
         <ThemeProvider>{children}</ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );
