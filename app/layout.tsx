@@ -98,7 +98,7 @@ export default function RootLayout({
         <ColorGlow />
         <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
         <ThemeProvider>{children}</ThemeProvider>
-        <Analytics/>
+        <Analytics mode="production"/>
       </body>
     </html>
   );
