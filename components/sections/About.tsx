@@ -30,6 +30,7 @@ export default function About() {
             <Button
               variant="outline"
               size="icon"
+              className="transition transform duration-200 active:scale-95 hover:scale-125"
               aria-label="Github"
               onClick={() =>
                 window.open('https://github.com/Rudra-Sankha-Sinhamahapatra', '_blank')
@@ -40,6 +41,7 @@ export default function About() {
             <Button
               variant="outline"
               size="icon"
+                            className="transition transform duration-200 active:scale-95 hover:scale-125"
               aria-label="Twitter"
               onClick={() => window.open('https://x.com/RudraSankha', '_blank')}
             >
@@ -48,6 +50,7 @@ export default function About() {
             <Button
               variant="outline"
               size="icon"
+                            className="transition transform duration-200 active:scale-95 hover:scale-125"
               aria-label="Linkedin"
               onClick={() =>
                 window.open(
@@ -61,6 +64,7 @@ export default function About() {
             <Button
               variant="outline"
               size="icon"
+                            className="transition transform duration-200 active:scale-95 hover:scale-125"
               aria-label="Resume"
               onClick={() =>
                 window.open(
