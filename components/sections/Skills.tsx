@@ -6,7 +6,7 @@ export const Skills = () => {
     <main>
       <section id="skills" className="min-h-screen py-20">
         <h2 className="mb-12 text-center text-3xl font-bold">Skills</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
           {skills.map((skill) => (
             <div
               key={skill.name}

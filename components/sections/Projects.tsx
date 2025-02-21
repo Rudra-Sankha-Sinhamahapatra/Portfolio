@@ -7,7 +7,7 @@ export default function Projects() {
         <h2 className="mb-12 text-center text-3xl font-bold text-white">
           Projects
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <div
               key={index}

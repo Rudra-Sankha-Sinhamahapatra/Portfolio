@@ -67,7 +67,7 @@ export const skills = [
   },
   {
     name: "Vercel AI SDK",
-    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/5/vercel-icon-1e44161oavq1mzuypoj9i7.png/vercel-icon-orebx5wd0vr5kk8w161dla.png?_a=DAJFJtWIZAAC",
+    icon: "https://pipedream.com/s.v0/app_XaLh2x/logo/orig",
     height: "10",
     width: "10",
   },
