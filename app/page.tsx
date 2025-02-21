@@ -13,9 +13,9 @@ export default function Home() {
     <main className="relative min-h-screen">
       <div className="container relative mx-auto max-w-5xl px-6">
       <About/>
+      <Experience/>
       <Skills/>
       <Projects/>
-      <Experience/>
       </div>
     </main>
   );

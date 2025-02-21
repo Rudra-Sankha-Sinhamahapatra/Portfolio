@@ -6,7 +6,7 @@ export default function About() {
   return (
     <main>
       <section id="about" className="py-16 mt-20">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <img
               src="https://avatars.githubusercontent.com/u/101992909?v=4"
@@ -15,7 +15,7 @@ export default function About() {
             />
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Hey, I&apos;m Rudra Sankha 👋
+                Hey, I&apos;m Rudra Sankha👋
               </h2>
               <p className="mt-4 text-base md:text-lg text-white">
                 I&apos;m a fullstack developer 🚀, optimist 🌟, and an open-source advocate 🌱.
