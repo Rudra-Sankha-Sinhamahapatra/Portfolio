@@ -35,8 +35,8 @@ export default function Experience() {
               onClick={() => toggleOpen(index)}
             >
   
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-4">
+              <div className="flex justify-between items-center flex-wrap sm:flex-nowrap gap-2 sm:gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
         
                   {exp.companyLogo && (
                     <div className="relative w-12 h-12 flex-shrink-0">
@@ -60,7 +60,7 @@ export default function Experience() {
                     <p className="text-sm text-gray-300">{exp.title}</p>
                   </div>
                 </div>
-                <p className="text-sm text-gray-400">{exp.duration}</p>
+                <p className="text-sm text-gray-400 text-left sm:text-right w-full sm:w-auto">{exp.duration}</p>
               </div>
 
               <motion.div
