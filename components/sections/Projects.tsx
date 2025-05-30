@@ -1,4 +1,5 @@
 import { projects } from "@/lib/projects";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   return (
@@ -11,10 +12,14 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative rounded-lg border border-[#D14309]  p-6 shadow-md text-white"
+              className="relative rounded-lg border border-[#D14309] p-6 shadow-md text-white flex flex-col"
             >
+              <div className="cursor-pointer" onClick={() => {
+                window.open(project.liveLink, "_blank");
+              }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover rounded-lg mb-4" />
+              </div>
               <h3
                 className="text-xl font-semibold underline cursor-pointer mb-2"
                 onClick={() => {
@@ -38,6 +43,14 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+              </div>
+              <div className="flex flex-row gap-2 mt-auto pt-4">
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-sm text-white">
+                  <FaExternalLinkAlt />
+                </a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white">
+                  <FaGithub />
+                </a>
               </div>
             </div>
           ))}
