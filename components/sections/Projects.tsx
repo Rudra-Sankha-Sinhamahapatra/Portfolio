@@ -13,6 +13,8 @@ export default function Projects() {
               key={index}
               className="relative rounded-lg border border-[#D14309]  p-6 shadow-md text-white"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover rounded-lg mb-4" />
               <h3
                 className="text-xl font-semibold underline cursor-pointer mb-2"
                 onClick={() => {
