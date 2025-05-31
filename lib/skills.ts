@@ -7,7 +7,7 @@ export const skills = [
   },
   {
     name: "Next Js",
-    icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
+    icon: "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2096%2096%22%20id%3D%22Nextjs-Icon--Streamline-Svg-Logos%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Nextjs%20Icon%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Cmask%20id%3D%22a%22%20width%3D%2294%22%20height%3D%2294%22%20x%3D%221%22%20y%3D%221%22%20maskUnits%3D%22userSpaceOnUse%22%20style%3D%22mask-type%3Aluminance%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M48%2095c25.9574%200%2047-21.0426%2047-47S73.9574%201%2048%201%201%2022.0426%201%2048s21.0426%2047%2047%2047Z%22%3E%3C%2Fpath%3E%0A%20%20%3C%2Fmask%3E%0A%20%20%3Cg%20mask%3D%22url(%23a)%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%230c95e6%22%20d%3D%22M48%2095c25.9574%200%2047-21.0426%2047-47S73.9574%201%2048%201%201%2022.0426%201%2048s21.0426%2047%2047%2047Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M79.0766%2083.2604%2037.1077%2029.2h-7.9075v37.5843h6.326V37.2336l38.5846%2049.8521c1.7411-1.1651%203.3996-2.444%204.9658-3.8253Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20fill%3D%22url(%23c)%22%20d%3D%22M67.3228%2029.2h-6.2666v37.5999h6.2666V29.2Z%22%3E%3C%2Fpath%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22b%22%20x1%3D%222803.95%22%20x2%3D%224469.55%22%20y1%3D%223293.09%22%20y2%3D%225357.5%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23fff%22%3E%3C%2Fstop%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%3E%3C%2Fstop%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22c%22%20x1%3D%22374.389%22%20x2%3D%22363.893%22%20y1%3D%2229.2%22%20y2%3D%222790.41%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20stop-color%3D%22%23fff%22%3E%3C%2Fstop%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%3E%3C%2Fstop%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E",
     height: "5",
     width: "5",
   },
@@ -31,7 +31,7 @@ export const skills = [
   },
   {
     name: "Node.js",
-    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/nodejs-j4c0hwu1qmirh64mynjuz.png/nodejs-0g7vrhqizuhwkx0tucqkyb.png?_a=DAJFJtWIZAAC",
+    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/nodejs-icon-alt-c9winwkuvxhsx1mkbcex8.png/nodejs-icon-alt-htav2s8jaxvvaonoj27yz.png?_a=DATAdtAAZAA0",
     height: "5",
     width: "5",
   },
@@ -79,7 +79,7 @@ export const skills = [
   },
   {
     name: "PostgreSQL",
-    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/postgresql-vqqukru3vd26puzkycyf.png/postgresql-47qvswpzqew46dzu8fil92.png?_a=DATAdtAAZAA0",
     height: "5",
     width: "5",
   },
@@ -91,7 +91,7 @@ export const skills = [
   },
   {
     name: "Vercel AI SDK",
-    icon: "https://pipedream.com/s.v0/app_XaLh2x/logo/orig",
+    icon: "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20id%3D%22Vercel-Icon--Streamline-Svg-Logos%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Vercel%20Icon%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22m12%201.823975%2011.75%2020.351825H0.25L12%201.823975Z%22%20stroke-width%3D%220.25%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
     height: "5",
     width: "5",
   },
