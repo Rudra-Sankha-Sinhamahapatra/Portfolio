@@ -4,7 +4,7 @@ import { skills } from "@/lib/skills";
 export const Skills = () => {
   return (
     <main>
-      <section id="skills" className="min-h-screen pt-20">
+      <section id="skills" className="min-h-[60vh] mt-20">
         <h2 className="mb-12 text-center text-3xl font-bold">Skills</h2>
         <div className="max-w-4xl max-xs2:max-w-[500px] max-xs:max-w-[200px] max-xs2:min-w-[300px] mx-auto grid grid-cols-1 xs:grid-cols-2 xs2:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5  gap-3 px-4">
           {skills.map((skill) => (
