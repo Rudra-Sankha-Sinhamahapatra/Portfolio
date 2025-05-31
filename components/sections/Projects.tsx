@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 export default function Projects() {
   return (
     <main>
-      <section id="projects" className="min-h-screen">
+      <section id="projects" className="min-h-screen mt-20">
         <h2 className="mb-12 text-center text-3xl font-bold text-white">
           Projects
         </h2>
