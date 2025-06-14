@@ -1,8 +1,11 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
 import { Github, Twitter, Linkedin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function About() {
+  const router = useRouter();
   return (
     <main>
       <section id="about" className="py-16 mt-20">
@@ -67,10 +70,7 @@ export default function About() {
                             className="transition transform duration-200 active:scale-95 hover:scale-125"
               aria-label="Resume"
               onClick={() =>
-                window.open(
-                  'https://drive.google.com/file/d/1Ywfqe1PVMf1_gLw-QVgYQnsg-8vgXb0q/view?usp=drive_link',
-                  '_blank'
-                )
+              router.push('/resume.pdf')
               }
             >
               <FileText className="h-6 w-6 text-white hover:text-gray-300 transition-colors" />
