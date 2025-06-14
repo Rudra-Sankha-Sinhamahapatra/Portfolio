@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["avatars.githubusercontent.com","firstlist.in"],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/Resume.pdf',
+        destination: '/Resume.pdf',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
