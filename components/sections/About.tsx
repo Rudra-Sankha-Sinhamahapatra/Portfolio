@@ -22,7 +22,7 @@ export default function About() {
               </h2>
               <p className="mt-4 text-base md:text-lg text-white">
                 I&apos;m a fullstack developer 🚀, optimist 🌟, and an open-source advocate 🌱.
-                I&apos;m currently learning Web3 and building projects on it while contributing
+                I&apos;m currently learning Python,FastAPI and building fullstack projects on it while contributing
                 to multiple open-source projects.
               </p>
             </div>

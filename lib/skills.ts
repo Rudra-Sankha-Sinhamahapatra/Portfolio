@@ -48,6 +48,12 @@ export const skills = [
    width: "5",
   },
   {
+    name: "FastAPI",
+    icon:"https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/3/fastapi-icon-72blnc5ihz9c30ltfruvm.png/fastapi-icon-sv7hsd0o3donlq26es2lr.png?_a=DATAdtAAZAA0",
+    height: "5",
+    width: "5",
+  },
+  {
     name: "Typescript",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/5/typescript-icon-72zw2qe1mom0nafkd5pj6n.png/typescript-icon-lks16d1xu9b9qyidink7t.png?_a=DAJFJtWIZAAC",
     height: "5",
@@ -56,6 +62,12 @@ export const skills = [
   {
     name: "Java",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/java-3l83r8hh7v5yhem0n2e1d.png/java-uny7np2dj70tb7u5at0ko.png?_a=DAJFJtWIZAAC",
+    height: "5",
+    width: "5",
+  },
+  {
+    name: "Python",
+    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/python-po4azchn31kosiru27eiq.png/python-ac501tf6xzjdkig0nu8xbr.png?_a=DATAdtAAZAA0",
     height: "5",
     width: "5",
   },
