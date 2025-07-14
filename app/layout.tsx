@@ -96,7 +96,7 @@ export default function RootLayout({
         <SpaceWarpCanvas />
         <CometCanvas />
         <ColorGlow />
-        <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
+        <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-green-500" />
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics mode="production"/>
       </body>

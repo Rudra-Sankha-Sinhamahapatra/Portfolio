@@ -12,7 +12,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative rounded-lg border border-[#D14309] p-6 shadow-md text-white flex flex-col"
+              className="relative rounded-lg border border-green-500 p-6 shadow-md text-white flex flex-col"
             >
               <div className="cursor-pointer" onClick={() => {
                 window.open(project.liveLink, "_blank");
@@ -37,7 +37,7 @@ export default function Projects() {
                   {project.techStacks.map((stack, stackIndex) => (
                     <span
                       key={stackIndex}
-                      className="rounded-full bg-[#D14309] bg-opacity-20 px-3 py-1 text-sm text-white border border-[#D14309]"
+                      className="rounded-full bg-green-500 bg-opacity-20 px-3 py-1 text-sm text-white border border-green-500"
                     >
                       #{stack}
                     </span>

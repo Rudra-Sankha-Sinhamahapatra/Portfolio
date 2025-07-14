@@ -10,7 +10,7 @@ export const Skills = () => {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center rounded-lg border border-[#D14309] bg-card p-2.5 text-card-foreground shadow-sm"
+              className="flex items-center rounded-lg border border-green-500 bg-card p-2.5 text-card-foreground shadow-sm"
             >
               <img
                 src={skill.icon || ""}

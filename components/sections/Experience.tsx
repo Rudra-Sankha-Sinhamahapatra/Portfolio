@@ -14,7 +14,7 @@ export default function Experience() {
   const highlightKeywords = (text: string) => {
     return text.split(" ").map((word, index) =>
       keywords.includes(word.replace(/[^a-zA-Z0-9]/g, "")) ? (
-        <span key={index} className="text-[#D14309] font-semibold">{word} </span>
+        <span key={index} className="text-green-500 font-semibold">{word} </span>
       ) : (
         word + " "
       )
@@ -81,7 +81,7 @@ export default function Experience() {
                     {exp.techStacks.map((stack, stackIndex) => (
                       <span
                         key={stackIndex}
-                        className="rounded-full bg-[#D14309] bg-opacity-20 px-3 py-1 text-sm text-white border border-[#D14309]"
+                        className="rounded-full bg-green-500 bg-opacity-20 px-3 py-1 text-sm text-white border border-green-500"
                       >
                         #{stack}
                       </span>
