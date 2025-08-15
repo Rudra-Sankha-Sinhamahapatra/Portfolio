@@ -24,6 +24,14 @@ export interface Project {
      liveLink:"https://adda-ai.rudrasankha.com",
      techStacks:["TurboRepo","Next Js","React Js","Tailwind Css","Vercel AI SDK","Zustand","Supabase","Typescript","Nest Js","Gemini","Prisma","PostgreSQL","Vector DB"],
     },
+      {
+    image:"https://pbs.twimg.com/media/GyYSklPa4AI7p4g?format=jpg&name=4096x4096",
+    title: "BetterUptime",
+    description:"BetterUptime is a website monitoring platform that tracks the uptime and response times of websites. It provides real-time dashboards, downtime/recovery alerts via email, and secure authentication using Better Auth (Google OAuth).",
+    link:"https://github.com/Rudra-Sankha-Sinhamahapatra/Better-Uptime",
+    liveLink:"https://better-uptime.rudrasankha.com",
+    techStacks: ["Next.js", "React.js", "RabbitMQ", "Redis", "PostgreSQL", "Prisma", "Better Auth", "Nodemailer", "Turborepo"]
+  },
     {
       image:"https://pbs.twimg.com/media/GsOZ_82aEAAuraE?format=jpg&name=4096x4096",
       title: "Xemen",
