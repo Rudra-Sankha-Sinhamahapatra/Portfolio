@@ -21,8 +21,8 @@ export default function About() {
                 Hey, I&apos;m Rudra Sankha👋
               </h2>
               <p className="mt-4 text-base md:text-lg text-white">
-                I&apos;m a fullstack developer 🚀, optimist 🌟, and an open-source advocate 🌱.
-                I&apos;m currently learning Python,FastAPI and building fullstack projects on it while contributing
+                I&apos;m a fullstack developer, optimist, and an open-source advocate 🌱.
+                I&apos;m currently exploring AI agents and building fullstack projects on it while contributing
                 to multiple open-source projects.
               </p>
             </div>
