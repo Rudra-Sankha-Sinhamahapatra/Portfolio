@@ -10,7 +10,7 @@ const getSkillIcon = (techName: string) => {
   );
   
   if (!skill) {
-    skill = skills.find(skill => {
+    skill = skills.find((skill) => {
       const normalizedSkillName = skill.name.toLowerCase();
       const techNameNoDots = normalizedTechName.replace(/\./g, ' ');
       const skillNameNoDots = normalizedSkillName.replace(/\./g, ' ');
@@ -74,7 +74,7 @@ const getSkillIcon = (techName: string) => {
 export default function Projects() {
   return (
     <main>
-      <section id="projects" className="min-h-screen my-20">
+      <section id="projects" className="min-h-screen mt-0 mb-20">
         <h2 className="mb-12 text-center text-3xl font-bold text-white">
           Projects
         </h2>
