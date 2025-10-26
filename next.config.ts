@@ -5,7 +5,7 @@ const nextConfig = {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN
   },
   images: {
-    domains: ["avatars.githubusercontent.com","firstlist.in"],
+    domains: ["avatars.githubusercontent.com","firstlist.in","pbs.twimg.com","assets.streamlinehq.com","images.seeklogo.com"],
   },
   async rewrites() {
     return [

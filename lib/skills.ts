@@ -170,7 +170,7 @@ export const skills: Skills[] = [
   },
   {
     name: "Solana",
-    icon: "https://images.seeklogo.com/logo-png/42/1/solana-sol-logo-png_seeklogo-423095.png",
+    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/solana-nt0msuwt0fdbaid1cv02s.png/solana-jsn2kuwq8fhmwr72f3goq.png?_a=DATAg1AAZAA0",
     height: "5",
     width: "5",
     visibility: false
