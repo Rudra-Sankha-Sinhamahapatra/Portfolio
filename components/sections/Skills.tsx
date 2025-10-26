@@ -1,29 +1,52 @@
+"use client";
+
 /* eslint-disable @next/next/no-img-element */
 import { skills } from "@/lib/skills";
+import LogoLoop from "@/components/ui/LogoLoop";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const Skills = () => {
+  const { resolvedTheme } = useTheme();
+  const [fadeOutColor, setFadeOutColor] = useState('#111010');
+  
+  useEffect(() => {
+    setFadeOutColor(resolvedTheme === 'light' ? '#ffffff' : '#111010');
+  }, [resolvedTheme]);
+  
+  const logoItems = skills
+    .filter((skill) => skill.visibility)
+    .map((skill) => ({
+      src: skill.icon,
+      alt: `${skill.name} logo`,
+      title: skill.name,
+      width: skill.width === "5" ? 40 : skill.width === "6" ? 48 : 40,
+      height: skill.height === "5" ? 40 : skill.height === "6" ? 48 : 40,
+    }));
+
   return (
-    <main>
-      <section id="skills" className="min-h-[60vh] mt-20">
-        <h2 className="mb-12 text-center text-3xl font-bold">Skills</h2>
-        <div className="max-w-4xl max-xs2:max-w-[500px] max-xs:max-w-[200px] max-xs2:min-w-[300px] mx-auto grid grid-cols-1 xs:grid-cols-2 xs2:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5  gap-3 px-4">
-          {skills
-            .filter((skill) => skill.visibility)
-            .map((skill) => (
-              <div
-                key={skill.name}
-                className="flex items-center rounded-lg border border-[#D14309] bg-card p-2.5 text-card-foreground shadow-sm"
-              >
-                <img
-                  src={skill.icon || ""}
-                  alt={`${skill.name} icon`}
-                  className={`w-${skill.width} h-${skill.height} mr-3`}
-                />
-                <h3 className="text-sm font-semibold">{skill.name}</h3>
-              </div>
-          ))}
+    <section id="skills">
+      <div className="bg-[#141313]/80 dark:bg-[#141313]/80 light:bg-white/10 backdrop-blur-lg rounded-xl border border-white/10 dark:border-white/10 light:border-blue-100/20 p-8">
+        <div className="flex items-center gap-3 mb-6">
+          <h2 className="text-2xl font-bold text-white dark:text-white light:text-gray-800">Tech Stacks</h2>
         </div>
-      </section>
-    </main>
+
+        <div className="relative">
+          <LogoLoop
+            logos={logoItems}
+            speed={60}
+            direction="left"
+            logoHeight={48}
+            gap={32}
+            pauseOnHover={true}
+            scaleOnHover={true}
+            fadeOut={true}
+            fadeOutColor={fadeOutColor}
+            ariaLabel="Technology stack"
+            className="py-4"
+          />
+        </div>
+      </div>
+    </section>
   );
 };

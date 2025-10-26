@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN
+  },
   images: {
     domains: ["avatars.githubusercontent.com","firstlist.in"],
   },
@@ -13,6 +15,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

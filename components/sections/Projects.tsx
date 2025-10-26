@@ -1,146 +1,74 @@
 import { projects } from "@/lib/projects";
-import { skills } from "@/lib/skills";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
-const getSkillIcon = (techName: string) => {
-  const normalizedTechName = techName.toLowerCase().trim();
-  
-  let skill = skills.find(skill => 
-    skill.name.toLowerCase() === normalizedTechName
-  );
-  
-  if (!skill) {
-    skill = skills.find((skill) => {
-      const normalizedSkillName = skill.name.toLowerCase();
-      const techNameNoDots = normalizedTechName.replace(/\./g, ' ');
-      const skillNameNoDots = normalizedSkillName.replace(/\./g, ' ');
-      
-      return normalizedSkillName.includes(normalizedTechName) || 
-             normalizedTechName.includes(normalizedSkillName) ||
-             skillNameNoDots.includes(techNameNoDots) ||
-             techNameNoDots.includes(skillNameNoDots);
-    });
-  }
-  
-  if (!skill) {
-    const specialCases: { [key: string]: string | null } = {
-      'next.js': 'Next Js',
-      'next js': 'Next Js',
-      'nextjs': 'Next Js',
-      'react.js': 'React Js',
-      'react js': 'React Js',
-      'reactjs': 'React Js',
-      'node.js': 'Node.js',
-      'node js': 'Node.js',
-      'nodejs': 'Node.js',
-      'express.js': 'Express.js',
-      'express js': 'Express.js',
-      'expressjs': 'Express.js',
-      'nest.js': 'Nest.js',
-      'nest js': 'Nest.js',
-      'nestjs': 'Nest.js',
-      'rabbitmq': 'RabbitMQ',
-      'tailwind css': 'Tailwind Css',
-      'tailwindcss': 'Tailwind Css',
-      'mongo db': 'Mongo DB',
-      'mongodb': 'Mongo DB',
-      'postgresql': 'PostgreSQL',
-      'postgres': 'PostgreSQL',
-      'gemini': 'Google Gemini',
-      'web sockets': 'Websockets',
-      'websocket': 'Websockets',
-      'turborepo': 'Turborepo',
-      'prisma orm': 'Prisma',
-      'next auth': null,
-      'better auth': null,
-      'jspdf': null,
-      'pptgenx': null, 
-      'nodemailer': null, 
-      'wagmi': null,
-      'solidity': null,  
-      'vector db': null,
-      'ethereum': null
-    };
-    
-    const mappedSkillName = specialCases[normalizedTechName];
-    if (mappedSkillName) {
-      skill = skills.find(s => s.name === mappedSkillName);
-    }
-  }
-  
-  return skill ? { icon: skill.icon, width: skill.width, height: skill.height } : null;
-};
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Projects() {
   return (
-    <main>
-      <section id="projects" className="min-h-screen mt-0 mb-20">
-        <h2 className="mb-12 text-center text-3xl font-bold text-white">
-          Projects
-        </h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg border border-[#D14309] p-6 shadow-md text-white flex flex-col"
-            >
-              <div className="cursor-pointer" onClick={() => {
-                window.open(project.liveLink, "_blank");
-              }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={project.image} alt={project.title} className="w-full h-[200px] object-cover rounded-lg mb-4" />
-              </div>
-              <h3
-                className="text-xl font-semibold underline cursor-pointer mb-2"
-                onClick={() => {
-                  window.open(project.link, "_blank");
-                }}
-              >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className="
+            bg-white 
+            dark:bg-[#1C1C1C]
+            rounded-xl 
+            overflow-hidden 
+            shadow-lg 
+            border border-gray-200 
+            dark:border-[#2E2E2E]
+            transition-all 
+            duration-300 
+            hover:scale-[1.02] 
+            hover:shadow-xl
+            flex 
+            flex-col
+          "
+        >
+          <div className="relative group">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-[250px] object-cover group-hover:brightness-90 transition-all duration-300"
+            />
+            
+            <div className="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <h3 className="font-normal text-[#ffffff] text-sm sm:text-base m-0 line-clamp-1 break-words">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm text-gray-300">{project.description}</p>
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold text-gray-400 mb-2">
-                  Tech Stacks:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.techStacks.map((stack, stackIndex) => {
-                    const skillIcon = getSkillIcon(stack);
-                    return (
-                      <span
-                        key={stackIndex}
-                        className="rounded-full bg-[#D14309] bg-opacity-20 px-3 py-1 text-sm text-white border border-[#D14309] flex items-center gap-2"
-                      >
-                        {skillIcon && (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img 
-                            src={skillIcon.icon} 
-                            alt={`${stack} icon`}
-                            className="w-4 h-4"
-                            style={{
-                              width: '16px',
-                              height: '16px'
-                            }}
-                          />
-                        )}
-                        {stack}
-                      </span>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="flex flex-row gap-2 mt-auto pt-4">
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-sm text-white">
-                  <FaExternalLinkAlt />
-                </a>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white">
-                  <FaGithub />
-                </a>
-              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="p-4 text-center flex-grow flex flex-col justify-center">
+            <Link 
+              href={`/projects/${project.id}`}
+              className="
+                w-full 
+                rounded-lg 
+                bg-neutral-100 
+                dark:bg-[#2E2E2E] 
+                border border-neutral-300 
+                dark:border-[#3E3E3E] 
+                px-4 sm:px-5 
+                py-3 sm:py-4 
+                text-neutral-700 
+                dark:text-[#a8a8a8] 
+                text-sm sm:text-base 
+                transition-colors 
+                duration-150 
+                text-center 
+                hover:bg-neutral-200 
+                dark:hover:bg-[#3E3E3E]
+                flex 
+                items-center 
+                justify-center 
+                gap-2
+              "
+            >
+              More Info <FaArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
-      </section>
-    </main>
+      ))}
+    </div>
   );
 }

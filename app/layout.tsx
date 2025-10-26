@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ColorGlow from "@/components/ui/GlowEffect";
-import { FloatingNav } from "@/components/floating-nav";
+import { Navbar } from "@/components/navbar";
 import ThemeProvider from "@/components/setTheme";
-import SpaceWarpCanvas from "@/components/SpaceWrapCanvas";
-import CometCanvas from "@/components/CometCanvas";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -70,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Script
           id="structured-data"
@@ -93,12 +90,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SpaceWarpCanvas />
-        <CometCanvas />
-        <ColorGlow />
-        <FloatingNav addClass="fixed inset-x-0 bottom-0 border border-[#D14309]" />
-        <ThemeProvider>{children}</ThemeProvider>
-        <Analytics mode="production"/>
+        <ThemeProvider>
+          <Navbar />
+          <main className="relative z-10">
+            {children}
+          </main>
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

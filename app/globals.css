@@ -1,3 +1,177 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Theme transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles */
+html.light {
+  color-scheme: light;
+  background-color: #f0f4f8; /* Soft, muted blue-gray background */
+  color: #1a202c; /* Deep gray for text */
+}
+
+/* Dark mode styles */
+html.dark {
+  color-scheme: dark;
+  background-color: #111010;
+  color: white;
+}
+
+/* Light mode specific background and text styles */
+.light {
+  --background-primary: #f0f4f8;
+  --background-secondary: #ffffff;
+  --text-primary: #1a202c;
+  --text-secondary: #2d3748;
+  --border-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Global light mode adjustments */
+html.light body {
+  background: linear-gradient(
+    135deg, 
+    rgba(59, 130, 246, 0.03) 0%, 
+    rgba(59, 130, 246, 0.02) 50%, 
+    rgba(59, 130, 246, 0.01) 100%
+  );
+  min-height: 100vh;
+  background-attachment: fixed;
+  color: var(--text-primary);
+}
+
+/* Specific element adjustments for light mode */
+.light .bg-\[\#111010\] {
+  background-color: #ffffff !important;
+}
+
+.light .bg-\[\#141313\] {
+  background-color: #f7fafc !important;
+}
+
+.light .text-white {
+  color: var(--text-primary) !important;
+}
+
+.light .text-gray-300 {
+  color: #4a5568 !important;
+}
+
+.light .text-gray-400 {
+  color: #718096 !important;
+}
+
+.light .border-white\/10 {
+  border-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.light .backdrop-blur-lg {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Light mode button styles */
+.light .bg-\[\#141313\] {
+  background-color: #f1f5f9 !important;
+  color: #1a202c !important;
+}
+
+.light .bg-white\/10 {
+  background-color: rgba(59, 130, 246, 0.05) !important;
+  color: #1a202c !important;
+}
+
+.light .border-white\/20 {
+  border-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Enhanced hover states for light mode buttons */
+.light .hover\:bg-white\/20:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  color: #1a202c !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.light .hover\:bg-white\/10:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: #1a202c !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.light .hover\:bg-white\/10:hover .transform {
+  scale: 1.05 !important;
+}
+
+.light .hover\:text-white\/60:hover {
+  color: rgba(26, 32, 44, 0.8) !important;
+}
+
+/* Additional global styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Webkit browsers */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Focus styles */
+*:focus {
+  @apply outline-none  ring-0;
+}
+
+/* Ensure smooth theme transitions */
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
+
+/* Toggle gif effect */
+
+::view-transition-group(root) {
+    animation-timing-function: var(--expo-in);
+  }
+  
+  ::view-transition-new(root) {
+    mask: url('https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif') center / 0 no-repeat;
+    animation: scale 2s;
+    animation-fill-mode: both;
+  }
+  
+  ::view-transition-old(root),
+  .dark::view-transition-old(root) {
+    animation: scale 2s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes scale {
+    0% {
+      mask-size: 0;
+    }
+    10% {
+      mask-size: 50vmax;
+    }
+    90% {
+      mask-size: 50vmax;
+    }
+    100% {
+      mask-size: 2000vmax;
+    }
+  }

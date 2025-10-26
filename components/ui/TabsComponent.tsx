@@ -1,61 +1,87 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { usePathname, useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
-const TabsComponent = ({
-  tabs,
-  changeScale
-}: {
-  tabs: Array<{ id: string; label: string }>
-  changeScale: (scale: number) => void
-}) => {
-  const pathname = usePathname()
-  const getDefaultState = () => {
-    const activeTab = tabs.find((tab) => pathname.includes(tab.label))
-    return activeTab?.id ?? tabs[0].id
-  }
-  const [activeTab, setActiveTab] = useState(() => getDefaultState())
-  const router = useRouter()
+export interface TabItem {
+  label: string
+  content: React.ReactNode
+  icon?: React.ReactNode
+}
 
-  useEffect(() => {
-    if (pathname === "/") {
-      setActiveTab("");
+interface TabsComponentProps {
+  tabs: TabItem[]
+  className?: string
+  variant?: 'default' | 'underline' | 'pills'
+}
+
+export function TabsComponent({ 
+  tabs, 
+  className = '', 
+  variant = 'default' 
+}: TabsComponentProps) {
+  const [activeTab, setActiveTab] = useState(0)
+
+  const tabVariants = {
+    default: {
+      tabStyle: 'px-4 py-2 rounded transition-colors',
+      activeStyle: 'bg-brand/10 text-brand',
+      inactiveStyle: 'hover:bg-background/50 text-foreground/70'
+    },
+    underline: {
+      tabStyle: 'px-4 py-2 relative',
+      activeStyle: 'text-brand',
+      inactiveStyle: 'text-foreground/70'
+    },
+    pills: {
+      tabStyle: 'px-4 py-2 rounded-full transition-colors',
+      activeStyle: 'bg-brand text-white',
+      inactiveStyle: 'hover:bg-background/50 text-foreground/70'
     }
-  }, [pathname]);
+  }
+
+  const currentVariant = tabVariants[variant]
 
   return (
-    <div className="flex space-x-0">
-      {tabs.map((tab) => (
-        <button
-          onMouseEnter={() => changeScale(1.2)}
-          onMouseLeave={() => changeScale(1.1)}
-          onClick={() => {
-            setActiveTab(tab.id)
-            router.push(`#${tab.id}`)
-          }}
-          key={tab.id}
-          className={`${activeTab === tab.id ? "" : "hover:text-white/60"
-            } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-          style={{
-            WebkitTapHighlightColor: "transparent",
-          }}
+    <div className={`space-y-4 ${className}`}>
+
+      <div className="flex space-x-2 overflow-x-auto">
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveTab(index)}
+            className={`
+              flex items-center space-x-2 
+              ${currentVariant.tabStyle} 
+              ${activeTab === index 
+                ? currentVariant.activeStyle 
+                : currentVariant.inactiveStyle
+              }
+            `}
+          >
+            {tab.icon && <span className="mr-2">{tab.icon}</span>}
+            {tab.label}
+            {variant === 'underline' && activeTab === index && (
+              <motion.div
+                layoutId="underline"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand"
+              />
+            )}
+          </button>
+        ))}
+      </div>
+
+      <div className="tab-content">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.3 }}
         >
-          {activeTab === tab.id && (
-            <motion.span
-              layoutId="bubble"
-              className="absolute inset-0 z-10 bg-transparent-white mix-blend-difference rounded-full"
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              variants={{
-                initial: { scale: 1 },
-                hover: { scale: 1.1 }
-              }}
-            />
-          )}
-          <span className="font-bold text-md">{tab.label}</span>
-        </button>
-      ))}
+          {tabs[activeTab].content}
+        </motion.div>
+      </div>
     </div>
   )
 }
