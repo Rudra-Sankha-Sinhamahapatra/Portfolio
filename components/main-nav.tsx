@@ -7,14 +7,17 @@ export function MainNav({ changeScale }: { changeScale: (scale: number) => void 
     {
       id: "about",
       label: "about",
+      content: null
     },
     {
       id: "skills",
       label: "skills",
+      content: null
     },
     {
       id: "projects",
       label: "projects",
+      content: null
     },
   ]
 

@@ -4,23 +4,30 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 export interface TabItem {
-  label: string
-  content: React.ReactNode
-  icon?: React.ReactNode
+  label: string;
+  content?: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 interface TabsComponentProps {
-  tabs: TabItem[]
-  className?: string
-  variant?: 'default' | 'underline' | 'pills'
+  tabs: TabItem[];
+  className?: string;
+  variant?: 'default' | 'underline' | 'pills';
+  changeScale?: (scale: number) => void;
 }
 
-export function TabsComponent({ 
-  tabs, 
-  className = '', 
-  variant = 'default' 
+export function TabsComponent({
+  tabs,
+  className = '',
+  variant = 'default',
+  changeScale
 }: TabsComponentProps) {
   const [activeTab, setActiveTab] = useState(0)
+
+  const handleTabClick = (index: number) => {
+    setActiveTab(index)
+    changeScale?.(1) 
+  }
 
   const tabVariants = {
     default: {
@@ -49,7 +56,7 @@ export function TabsComponent({
         {tabs.map((tab, index) => (
           <button
             key={index}
-            onClick={() => setActiveTab(index)}
+            onClick={() => handleTabClick(index)}
             className={`
               flex items-center space-x-2 
               ${currentVariant.tabStyle} 

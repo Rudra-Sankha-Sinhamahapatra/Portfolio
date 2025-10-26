@@ -1,5 +1,20 @@
 import { ContributionData } from '@/components/ui/ContributionGraph'
 
+interface GitHubContributionDay {
+  contributionCount: number;
+  date: string;
+  contributionLevel: 'NONE' | 'FIRST_QUARTILE' | 'SECOND_QUARTILE' | 'THIRD_QUARTILE' | 'FOURTH_QUARTILE';
+}
+
+interface GitHubContributionWeek {
+  contributionDays: GitHubContributionDay[];
+}
+
+interface GitHubContributionCalendar {
+  totalContributions: number;
+  weeks: GitHubContributionWeek[];
+}
+
 export async function fetchGitHubContributions(
   username: string
 ): Promise<ContributionData[]> {
@@ -12,9 +27,10 @@ export async function fetchGitHubContributions(
     throw new Error('GitHub token is not configured')
   }
 
+
   const endDate = new Date()
   const startDate = new Date()
-  
+
   startDate.setFullYear(endDate.getFullYear() - 1)
   startDate.setMonth(endDate.getMonth())
   startDate.setDate(endDate.getDate())
@@ -61,16 +77,26 @@ export async function fetchGitHubContributions(
       throw new Error(`GitHub API request failed: ${errorBody}`)
     }
 
-    const data = await response.json()
+    const data = await response.json() as {
+      data: {
+        user: {
+          contributionsCollection: {
+            contributionCalendar: GitHubContributionCalendar
+          }
+        }
+      }
+    }
+
 
     if (!data.data || !data.data.user) {
       throw new Error(`No contributions found for username: ${username}`)
     }
 
+
     const contributions: ContributionData[] = data.data.user
       .contributionsCollection.contributionCalendar.weeks
-      .flatMap((week: any) => 
-        week.contributionDays.map((day: any) => ({
+      .flatMap((week) =>
+        week.contributionDays.map((day) => ({
           date: day.date,
           count: day.contributionCount,
           level: getLevelFromContributionLevel(day.contributionLevel)
@@ -84,8 +110,7 @@ export async function fetchGitHubContributions(
   }
 }
 
-
-function getLevelFromContributionLevel(level: string): number {
+function getLevelFromContributionLevel(level: GitHubContributionDay['contributionLevel']): number {
   switch(level) {
     case 'NONE': return 0
     case 'FIRST_QUARTILE': return 1

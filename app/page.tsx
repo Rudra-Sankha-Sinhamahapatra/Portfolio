@@ -5,7 +5,7 @@ import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
 import { Skills } from '@/components/sections/Skills';
 import ContributionGraphDemo from '@/components/sections/ContributionGraphDemo';
-import { MailIcon, GithubIcon } from '@/components/icons';
+import { MailIcon } from '@/components/icons';
 
 export default function Home() {
   return (
@@ -33,18 +33,18 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => window.open('https://cal.com/rudrasankha', '_blank')}
-                  className="bg-[#141313] border border-white/20 text-white py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold transform hover:scale-105 flex items-center gap-2"
+                  className="bg-[#141313] border border-white/20 text-white py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold transform hover:scale-105 flex items-center gap-2 focus:outline-none"
                 >
-                  <img 
-                    src="https://avatars.githubusercontent.com/u/101992909?v=4" 
-                    alt="GitHub Avatar" 
+                  <img
+                    src="https://avatars.githubusercontent.com/u/101992909?v=4"
+                    alt="GitHub Avatar"
                     className="w-6 h-6 rounded-full"
                   />
                   Book a Call
                 </button>
-                <button 
+                <button
                   onClick={() => window.location.href = 'mailto:workforrudra24@gmail.com'}
-                  className="bg-white/10 border border-white/20 text-white py-3 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold flex items-center gap-2"
+                  className="bg-white/10 border border-white/20 text-white py-3 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold flex items-center gap-2 focus:outline-none"
                 >
                   <MailIcon className="w-5 h-5" />
                   Send Message
