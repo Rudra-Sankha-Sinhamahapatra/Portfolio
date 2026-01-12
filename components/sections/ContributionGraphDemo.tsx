@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react"
 import { ContributionGraph, ContributionData } from "../ui/ContributionGraph"
-import { fetchGitHubContributions } from "@/lib/githubContributions"
 import { getLastOneYearRange } from "@/lib/year"
 import { ContributionSkeleton } from "../ui/ContributionSkeleton"
 
@@ -20,7 +19,19 @@ export function ContributionGraphDemo() {
         let data: ContributionData[] = [];
 
           const { from, to } = getLastOneYearRange()
-          data = await fetchGitHubContributions('Rudra-Sankha-Sinhamahapatra', from, to)
+
+          data = await fetch('/api/github-contributions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ from, to }),
+          }).then(res => {
+            if (!res.ok) {
+              throw new Error(`Error fetching contributions: ${res.statusText}`);
+            }
+            return res.json();
+          });
 
         setContributions(data)
 
