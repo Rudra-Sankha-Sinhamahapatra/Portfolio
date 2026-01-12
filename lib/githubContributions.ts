@@ -16,7 +16,9 @@ interface GitHubContributionCalendar {
 }
 
 export async function fetchGitHubContributions(
-  username: string
+  username: string,
+  from: Date,
+  to: Date,
 ): Promise<ContributionData[]> {
 
   if (!username) {
@@ -27,20 +29,11 @@ export async function fetchGitHubContributions(
     throw new Error('GitHub token is not configured')
   }
 
-
-  const endDate = new Date()
-  const startDate = new Date()
-
-  startDate.setFullYear(endDate.getFullYear() - 1)
-  startDate.setMonth(endDate.getMonth())
-  startDate.setDate(endDate.getDate())
-
   const query = `
     query {
       user(login: "${username}") {
-        contributionsCollection(from: "${startDate.toISOString()}", to: "${endDate.toISOString()}") {
+        contributionsCollection(from: "${from.toISOString()}", to: "${to.toISOString()}") {
           contributionCalendar {
-            totalContributions
             weeks {
               contributionDays {
                 contributionCount

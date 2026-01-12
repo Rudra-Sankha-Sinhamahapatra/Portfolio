@@ -11,7 +11,6 @@ export interface ContributionData {
 
 export interface ContributionGraphProps {
   data?: ContributionData[]
-  year?: number
   className?: string
   showLegend?: boolean
   showTooltips?: boolean
@@ -24,7 +23,6 @@ const MONTHS = [
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
-// Updated contribution level colors (more GitHub-like)
 const CONTRIBUTION_COLORS = [
   "bg-gray-400 opacity-30 hover:opacity-100", // Level 0 - No contributions
   "bg-green-700", // Level 1
@@ -37,7 +35,6 @@ const CONTRIBUTION_LEVELS = [0, 1, 2, 3, 4]
 
 export function ContributionGraph({
   data = [],
-  year = new Date().getFullYear(),
   className = "",
   showLegend = true,
   showTooltips = true,
@@ -45,122 +42,81 @@ export function ContributionGraph({
   const [hoveredDay, setHoveredDay] = useState<ContributionData | null>(null)
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
 
-  // Generate all days for the year
   const yearData = useMemo(() => {
-    const startDate = new Date(year, 0, 1)
-    const endDate = new Date(year, 11, 31)
-    const days: ContributionData[] = []
+    if (!data.length) return []
 
-    // Start from the Sunday of the first week that contains January 1st
-    // This ensures December gets proper weeks before January
+    const sortedData = [...data].sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+
+    const startDate = new Date(sortedData[0].date)
+    const endDate = new Date(sortedData[sortedData.length - 1].date)
+
     const firstSunday = new Date(startDate)
     firstSunday.setDate(startDate.getDate() - startDate.getDay())
 
-    // Generate 53 weeks (GitHub shows 53 weeks)
-    for (let week = 0; week < 53; week++) {
-      for (let day = 0; day < 7; day++) {
-        const currentDate = new Date(firstSunday)
-        currentDate.setDate(firstSunday.getDate() + week * 7 + day)
 
-        // Include days from the previous year's December if they're in the first week
-        const isInRange = currentDate >= startDate && currentDate <= endDate
-        const isPreviousYearDecember =
-          currentDate.getFullYear() === year - 1 &&
-          currentDate.getMonth() === 11
-        const isNextYearJanuary =
-          currentDate.getFullYear() === year + 1 && currentDate.getMonth() === 0
+    const lastSaturday = new Date(endDate)
+    lastSaturday.setDate(endDate.getDate() + (6 - endDate.getDay()))
 
-        if (isInRange || isPreviousYearDecember || isNextYearJanuary) {
-          const dateString = currentDate.toISOString().split("T")[0]
-          const existingData = data.find((d) => d.date === dateString)
+    const days: ContributionData[] = []
+     const current = new Date(firstSunday)
 
-          days.push({
-            date: dateString,
-            count: existingData?.count || 0,
-            level: existingData?.level || 0,
-          })
-        } else {
-          // Add empty day for alignment
-          days.push({
-            date: "",
-            count: 0,
-            level: 0,
-          })
-        }
-      }
+    while (current <= lastSaturday) {
+      const dateString = current.toISOString().split("T")[0]
+      const existingData = sortedData.find((d) => d.date === dateString)
+
+      days.push({
+        date: dateString,
+        count: existingData?.count || 0,
+        level: existingData?.level || 0,
+      })
+
+      current.setDate(current.getDate() + 1)
     }
+
 
     return days
-  }, [data, year])
+  }, [data])
 
-  // Calculate month headers with colspan
-  const monthHeaders = useMemo(() => {
-    const headers: { month: string; colspan: number; startWeek: number }[] = []
-    const startDate = new Date(year, 0, 1)
-    const firstSunday = new Date(startDate)
-    firstSunday.setDate(startDate.getDate() - startDate.getDay())
+const monthHeaders = useMemo(() => {
+  if (!yearData.length) return []
 
-    let currentMonth = -1
-    let currentYear = -1
-    let monthStartWeek = 0
-    let weekCount = 0
+  const headers: { month: string; colspan: number }[] = []
 
-    for (let week = 0; week < 53; week++) {
-      const weekDate = new Date(firstSunday)
-      weekDate.setDate(firstSunday.getDate() + week * 7)
+  let lastMonth = -1
+  let lastMonthStartIndex = 0
 
-      // Use a combined key for month and year to handle December from previous year
-      const monthKey = weekDate.getMonth()
-      const yearKey = weekDate.getFullYear()
+  for (let i = 0; i < yearData.length; i += 7) {
+    const day = yearData[i]
+    if (!day?.date) continue
 
-      if (monthKey !== currentMonth || yearKey !== currentYear) {
-        if (currentMonth !== -1) {
-          // Only show months from the current year, and only show December from previous year
-          // if it actually contains days from the current year and has enough weeks to justify a header
-          const shouldShowMonth =
-            currentYear === year ||
-            (currentYear === year - 1 &&
-              currentMonth === 11 &&
-              startDate.getDay() !== 0 &&
-              weekCount >= 2)
+    const date = new Date(day.date)
+    const month = date.getMonth()
 
-          if (shouldShowMonth) {
-            headers.push({
-              month: MONTHS[currentMonth],
-              colspan: weekCount,
-              startWeek: monthStartWeek,
-            })
-          }
-        }
-        currentMonth = monthKey
-        currentYear = yearKey
-        monthStartWeek = week
-        weekCount = 1
-      } else {
-        weekCount++
-      }
-    }
-
-    // Add the last month
-    if (currentMonth !== -1) {
-      const shouldShowMonth =
-        currentYear === year ||
-        (currentYear === year - 1 &&
-          currentMonth === 11 &&
-          startDate.getDay() !== 0 &&
-          weekCount >= 2)
-
-      if (shouldShowMonth) {
+    if (month !== lastMonth) {
+      if (lastMonth !== -1) {
         headers.push({
-          month: MONTHS[currentMonth],
-          colspan: weekCount,
-          startWeek: monthStartWeek,
+          month: MONTHS[lastMonth],
+          colspan: (i - lastMonthStartIndex) / 7,
         })
       }
-    }
 
-    return headers
-  }, [year])
+      lastMonth = month
+      lastMonthStartIndex = i
+    }
+  }
+
+  if (lastMonth !== -1) {
+    headers.push({
+      month: MONTHS[lastMonth],
+      colspan: (yearData.length - lastMonthStartIndex) / 7,
+    })
+  }
+
+  return headers
+}, [yearData])
+
 
   const handleDayHover = (day: ContributionData, event: React.MouseEvent) => {
     if (showTooltips && day.date) {
@@ -194,9 +150,9 @@ export function ContributionGraph({
     <div className={`contribution-graph w-full max-w-7xl mx-auto ${className}`}>
       <div className="overflow-x-auto">
         <table className="border-separate border-spacing-1 text-xs w-full">
-          <caption className="sr-only">Contribution Graph for {year}</caption>
+          <caption className="sr-only">Contribution Graph (last 1 year)</caption>
 
-          {/* Month Headers */}
+
           <thead>
             <tr className="h-3">
               <td className="w-7 min-w-7"></td>
@@ -212,11 +168,11 @@ export function ContributionGraph({
             </tr>
           </thead>
 
-          {/* Day Grid */}
+
           <tbody>
             {Array.from({ length: 7 }, (_, dayIndex) => (
               <tr key={dayIndex} className="h-2.5">
-                {/* Day Labels */}
+
                 <td className="text-foreground relative w-7 min-w-7">
                   {dayIndex % 2 === 0 && (
                     <span className="absolute -bottom-0.5 left-0 text-xs">
@@ -225,7 +181,6 @@ export function ContributionGraph({
                   )}
                 </td>
 
-                {/* Day Cells */}
                 {Array.from({ length: 53 }, (_, weekIndex) => {
                   const dayData = yearData[weekIndex * 7 + dayIndex]
                   if (!dayData || !dayData.date) {
@@ -262,7 +217,6 @@ export function ContributionGraph({
         </table>
       </div>
 
-      {/* Tooltip */}
       {showTooltips && hoveredDay && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -292,7 +246,6 @@ export function ContributionGraph({
         </motion.div>
       )}
 
-      {/* Legend */}
       {showLegend && (
         <div className="text-foreground/70 mt-4 flex items-center justify-between text-xs">
           <span>Less</span>
