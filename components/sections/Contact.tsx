@@ -32,7 +32,7 @@ return (
               </div>
               <div className="mt-6 pt-6 border-t border-white/20">
                 <p className="text-gray-400 text-sm">
-                  © 2025 Rudra Sankha Sinhamahapatra. All rights reserved.
+                  © 2026 Rudra Sankha Sinhamahapatra. All rights reserved.
                 </p>
               </div>
             </div>
