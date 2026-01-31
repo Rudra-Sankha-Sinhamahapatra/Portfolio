@@ -12,8 +12,8 @@ export default function ResumePage() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       />
-      <div className="relative container mx-auto max-w-3xl px-6 pt-32 pb-20">
-        {/* Hero Card */}
+      <div className="relative container mx-auto max-w-5xl px-6 pt-32 pb-20">
+
         <div className="bg-[#141313]/80 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden mb-8">
           <div className="p-8 sm:p-10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
@@ -50,7 +50,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Quick Links */}
+
         <div className="bg-[#141313]/60 backdrop-blur-lg rounded-2xl border border-white/10 p-8">
           <h2 className="flex items-center gap-2 text-xl font-semibold text-white mb-6">
             <Briefcase className="w-5 h-5 text-blue-400" />
