@@ -1,5 +1,6 @@
 "use client"
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import { Github, Twitter, Linkedin, FileText, MapPin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -40,8 +41,16 @@ export default function About() {
           <p className="text-gray-300 leading-relaxed">
             I&apos;m a passionate fullstack developer who loves turning curiosity into code.
             Technology never fails to amaze me, it&apos;s the constant evolution and magic of building
-            that keeps me going. Currently exploring AI agents and building fullstack projects while
-            contributing to multiple open-source projects.
+            that keeps me going. Currently exploring React Native and building fullstack projects while
+            contributing to multiple open-source projects. Check out my{' '}
+            <Link href="/projects" className="text-blue-400 hover:text-blue-300 hover:underline" title="Rudra Sankha Projects - Portfolio">
+              projects
+            </Link>
+            {' '}— full-stack apps, AI, and web3. View my{' '}
+            <Link href="/resume" className="text-blue-400 hover:text-blue-300 hover:underline" title="Rudra Sankha Resume - CV">
+              resume
+            </Link>
+            {' '}for experience and skills.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -72,15 +81,16 @@ export default function About() {
               <Linkedin className="h-4 w-4 mr-2" />
               LinkedIn
             </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-[#141313] border-white/10 text-white hover:bg-white/10 transition-all duration-300"
-              onClick={() => window.open('/Resume.pdf', '_blank')}
-            >
-              <FileText className="h-4 w-4 mr-2" />
-              Resume
-            </Button>
+            <Link href="/resume" title="Rudra Sankha Resume - Download CV">
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-[#141313] border-white/10 text-white hover:bg-white/10 transition-all duration-300"
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Resume
+              </Button>
+            </Link>
         </div>
         </div>
         </div>

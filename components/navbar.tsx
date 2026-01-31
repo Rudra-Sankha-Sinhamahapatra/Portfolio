@@ -4,12 +4,10 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Moon, Sun, Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
-  const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -39,11 +37,6 @@ export function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleNavigation = (href: string) => {
-    router.push(href);
-    setIsDropdownOpen(false);
-  };
-
   if (!mounted) return null;
 
   return (
@@ -65,9 +58,9 @@ export function Navbar() {
 
             <div className="hidden sm:flex items-center space-x-8">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => router.push(item.href)}
+                  href={item.href}
                   className="
                     text-gray-300 dark:text-gray-300 light:text-gray-600 
                     hover:text-white dark:hover:text-white light:hover:text-gray-900 
@@ -77,7 +70,7 @@ export function Navbar() {
                   "
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </div>
 
@@ -139,9 +132,10 @@ export function Navbar() {
               "
             >
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => handleNavigation(item.href)}
+                  href={item.href}
+                  onClick={() => setIsDropdownOpen(false)}
                   className="
                     block w-full text-left 
                     px-4 py-3 
@@ -154,7 +148,7 @@ export function Navbar() {
                   "
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </div>
           </motion.div>
