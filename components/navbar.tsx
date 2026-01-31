@@ -37,8 +37,6 @@ export function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  if (!mounted) return null;
-
   return (
     <>
       <motion.nav
@@ -90,7 +88,7 @@ export function Navbar() {
                 className="text-gray-300 dark:text-gray-300 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-900 transition-colors duration-300 focus:outline-none hover:ring-0 active:ring-0"
                 aria-label="Toggle Theme"
               >
-                {resolvedTheme === 'dark' ? (
+                {mounted && resolvedTheme === 'dark' ? (
                   <Sun className="w-5 h-5" />
                 ) : (
                   <Moon className="w-5 h-5" />
