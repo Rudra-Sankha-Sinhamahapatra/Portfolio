@@ -20,7 +20,8 @@ export function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/", isRoute: true },
-    { name: "Projects", href: "/projects", isRoute: true }
+    { name: "Projects", href: "/projects", isRoute: true },
+    { name: "Resume", href: "/resume", isRoute: true }
   ];
 
   const toggleTheme = () => {

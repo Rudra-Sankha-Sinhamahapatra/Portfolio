@@ -23,7 +23,8 @@ export const metadata: Metadata = {
     template: "%s | Full Stack Developer",
   },
   description:
-    "I'm a Full Stack Developer skilled in React, Next.js, TypeScript,AWS, Node js. Check out my portfolio!",
+    "I'm a Full Stack Developer skilled in React, Next.js, TypeScript, AWS, Docker, Redis and Node.js. Check out my projects, resume, and portfolio!",
+  keywords: ["Rudra Sankha", "Rudra Sankha Sinhamahapatra", "Full Stack Developer"],
   openGraph: {
     title: "Rudra Sankha Sinhamahapatra  | Full Stack Developer",
     description:
