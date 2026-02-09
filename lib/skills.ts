@@ -22,6 +22,13 @@ export const skills: Skills[] = [
     visibility: true
   },
   {
+   name: "React Native",
+   icon: "data:image/svg+xml;utf8,%3Csvg%20role%3D%22img%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22Expo--Streamline-Simple-Icons%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Expo%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Ctitle%3EExpo%3C%2Ftitle%3E%0A%20%20%3Cpath%20d%3D%22M0%2020.084c0.043%200.53%200.23%201.063%200.718%201.778%200.58%200.849%201.576%201.315%202.303%200.567%200.49%20-0.505%205.794%20-9.776%208.35%20-13.29a0.761%200.761%200%200%201%201.248%200c2.556%203.514%207.86%2012.785%208.35%2013.29%200.727%200.748%201.723%200.282%202.303%20-0.567%200.57%20-0.835%200.728%20-1.42%200.728%20-2.046%200%20-0.426%20-8.26%20-15.798%20-9.092%20-17.078%20-0.8%20-1.23%20-1.044%20-1.498%20-2.397%20-1.542h-1.032c-1.353%200.044%20-1.597%200.311%20-2.398%201.542C8.267%203.991%200.33%2018.758%200%2019.77Z%22%20fill%3D%22%231cafd2%22%20stroke-width%3D%221%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
+   height: "5",
+   width: "5",
+   visibility: true,
+  },
+  {
     name: "Tailwind Css",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/tailwindcss-icon-lxvdm2ckbakronpli3lie.png/tailwindcss-icon-w2935uwocqtqvv7q2q257.png?_a=DAJFJtWIZAAC",
     height: "5",
@@ -107,7 +114,7 @@ export const skills: Skills[] = [
   },
   {
     name: "Vercel AI SDK",
-    icon: "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20id%3D%22Vercel-Icon--Streamline-Svg-Logos%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Vercel%20Icon%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22m12%201.823975%2011.75%2020.351825H0.25L12%201.823975Z%22%20stroke-width%3D%220.25%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
+    icon: "data:image/svg+xml;utf8,%3Csvg%20role%3D%22img%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22Vercel--Streamline-Simple-Icons%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Vercel%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Ctitle%3EVercel%3C%2Ftitle%3E%0A%20%20%3Cpath%20d%3D%22M24%2022.525H0l12%20-21.05%2012%2021.05z%22%20fill%3D%22%231cafd2%22%20stroke-width%3D%221%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
     height: "5",
     width: "5",
     visibility: true

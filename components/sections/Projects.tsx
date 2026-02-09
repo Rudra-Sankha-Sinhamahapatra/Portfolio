@@ -31,14 +31,14 @@ export default function Projects() {
               className="w-full h-[250px] object-cover group-hover:brightness-90 transition-all duration-300"
             />
             
-            <div className="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-              <h3 className="font-normal text-[#ffffff] text-sm sm:text-base m-0 line-clamp-1 break-words">
+            <div className="absolute bottom-0 w-full p-3 bg-linear-to-t from-black/80 via-black/40 to-transparent">
+              <h3 className="font-normal text-[#ffffff] text-sm sm:text-base m-0 line-clamp-1 wrap-break-word">
                 {project.title}
               </h3>
             </div>
           </div>
 
-          <div className="p-4 text-center flex-grow flex flex-col justify-center">
+          <div className="p-4 text-center grow flex flex-col justify-center">
             <Link 
               href={`/projects/${project.id}`}
               className="

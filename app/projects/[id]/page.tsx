@@ -20,7 +20,7 @@ export default function ProjectDetailPage({
 
     useEffect(() => {
         function findProject() {
-            const foundProject = projects.find(p => p.id === parseInt(id));
+            const foundProject = projects.find(p => p.id === id);
             setProject(foundProject || null);
             setLoading(false);
         }
@@ -77,7 +77,7 @@ export default function ProjectDetailPage({
                             className="w-full h-[400px] object-cover group-hover:brightness-90 transition-all duration-300"
                         />
                         
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/60 flex items-end p-6">
                             <h1 className="text-3xl font-bold text-[#ffffff]">{project.title}</h1>
                         </div>
                     </div>

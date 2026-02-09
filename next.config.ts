@@ -5,7 +5,33 @@ const nextConfig = {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN
   },
   images: {
-    domains: ["avatars.githubusercontent.com","firstlist.in","pbs.twimg.com","assets.streamlinehq.com","images.seeklogo.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'firstlist.in',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.streamlinehq.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.seeklogo.com',
+        pathname: '/**',
+      },
+    ],
   },
   async rewrites() {
     return [
@@ -14,9 +40,6 @@ const nextConfig = {
         destination: '/Resume.pdf',
       },
     ];
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 

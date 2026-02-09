@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import ThemeProvider from "@/components/setTheme";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react"
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -99,9 +100,9 @@ export default function RootLayout({
 
           <footer className="py-4 text-center border-t border-white/5">
             <nav className="flex justify-center gap-6 text-sm text-gray-500" aria-label="Footer">
-              <a href="/" className="hover:text-white transition-colors">Home</a>
-              <a href="/projects" className="hover:text-white transition-colors">Projects</a>
-              <a href="/resume" className="hover:text-white transition-colors">Resume</a>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
+              <Link href="/resume" className="hover:text-white transition-colors">Resume</Link>
             </nav>
           </footer>
           <Analytics />

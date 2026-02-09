@@ -1,6 +1,6 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
+ 
 import { skills } from "@/lib/skills";
 import LogoLoop from "@/components/ui/LogoLoop";
 import { useTheme } from "next-themes";
@@ -11,6 +11,7 @@ export const Skills = () => {
   const [fadeOutColor, setFadeOutColor] = useState('#111010');
   
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFadeOutColor(resolvedTheme === 'light' ? '#ffffff' : '#111010');
   }, [resolvedTheme]);
   

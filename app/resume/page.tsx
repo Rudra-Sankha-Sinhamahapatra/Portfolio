@@ -17,7 +17,7 @@ export default function ResumePage() {
         <div className="bg-[#141313]/80 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden mb-8">
           <div className="p-8 sm:p-10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <Image
                   src={siteConfig.avatar_image}
                   alt="Rudra Sankha Sinhamahapatra"
@@ -61,7 +61,7 @@ export default function ResumePage() {
               href="/projects"
               className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
                 <Briefcase className="w-5 h-5 text-blue-400" />
               </div>
               <div className="flex-1 min-w-0">
@@ -72,13 +72,13 @@ export default function ResumePage() {
                   Rudra Sankha Projects
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link
               href="/#about"
               className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
                 <User className="w-5 h-5 text-emerald-400" />
               </div>
               <div className="flex-1 min-w-0">
@@ -89,13 +89,13 @@ export default function ResumePage() {
                   Experience & Skills
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link
               href="/#contact"
               className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 sm:col-span-2"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
                 <ArrowRight className="w-5 h-5 text-amber-400" />
               </div>
               <div className="flex-1 min-w-0">
@@ -106,7 +106,7 @@ export default function ResumePage() {
                   Contact Rudra Sankha
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

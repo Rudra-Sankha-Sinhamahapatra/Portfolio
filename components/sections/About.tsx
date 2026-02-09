@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section id="about">
       <div className="bg-[#141313]/80 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden dark:bg-[#141313]/80 dark:border-white/10">
-        <div className="h-48 lg:h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative">
+        <div className="h-48 lg:h-64 bg-linear-to-br from-blue-600 via-indigo-400 to-cyan-400 relative">
           <img
             src="https://pbs.twimg.com/media/HAuqGpNboAAbZSP?format=png&name=900x900"
             alt="Cover"
@@ -28,7 +28,7 @@ export default function About() {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-white border-gray-300 text-gray-900 hover:bg-gray-100 dark:bg-[#1a1a1a] dark:border-white/10 dark:text-white dark:hover:bg-white/10 transition-all duration-300"
+                className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
                 onClick={() => window.open('https://github.com/Rudra-Sankha-Sinhamahapatra', '_blank')}
               >
                 <Github className="h-4 w-4" />
@@ -37,7 +37,7 @@ export default function About() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="bg-white border-gray-300 text-gray-900 hover:bg-gray-100 dark:bg-[#1a1a1a] dark:border-white/10 dark:text-white dark:hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-semibold hover:scale-105"
                 >
                   <FileText className="h-4 w-4 mr-2" />
                   Resume
@@ -99,7 +99,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white border-gray-300 text-gray-900 hover:bg-gray-100 dark:bg-[#1a1a1a] dark:border-white/10 dark:text-white dark:hover:bg-white/10 transition-all duration-300"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
               onClick={() => window.open('https://github.com/Rudra-Sankha-Sinhamahapatra', '_blank')}
             >
               <Github className="h-4 w-4 mr-2" />
@@ -108,7 +108,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white border-gray-300 text-gray-900 hover:bg-gray-100 dark:bg-[#1a1a1a] dark:border-white/10 dark:text-white dark:hover:bg-white/10 transition-all duration-300"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
               onClick={() => window.open('https://x.com/RudraSankha', '_blank')}
             >
               <Twitter className="h-4 w-4 mr-2" />
@@ -117,7 +117,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white border-gray-300 text-gray-900 hover:bg-gray-100 dark:bg-[#1a1a1a] dark:border-white/10 dark:text-white dark:hover:bg-white/10 transition-all duration-300"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
               onClick={() => window.open('https://www.linkedin.com/in/rudra-sankha-sinhamahapatra-6311aa1bb/', '_blank')}
             >
               <Linkedin className="h-4 w-4 mr-2" />

@@ -13,6 +13,7 @@ export function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -40,7 +41,7 @@ export function Navbar() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-[1000] bg-[#111010]/80 dark:bg-[#111010]/80 light:bg-[#e6f2ff]/80 backdrop-blur-lg border-b border-white/10 dark:border-white/10 light:border-blue-200/20"
+        className="fixed top-0 left-0 right-0 z-1000 bg-[#111010]/80 dark:bg-[#111010]/80 light:bg-[#e6f2ff]/80 backdrop-blur-lg border-b border-white/10 dark:border-white/10 light:border-blue-200/20"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -112,7 +113,7 @@ export function Navbar() {
         {isDropdownOpen && (
           <motion.div 
             className="
-              fixed top-16 left-0 right-0 z-[999] 
+              fixed top-16 left-0 right-0 z-999 
               sm:hidden
             "
             initial={{ opacity: 0, y: -20 }}
