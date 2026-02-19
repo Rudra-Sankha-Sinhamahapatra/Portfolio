@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Explore my projects, blog, and experience in full stack development,web3,devops",
     url: "https://rudrasankha.com",
-    siteName: "Rudra Sankha Portfolio",
+    siteName: "Rudra Sankha Sinhamahapatra",
     locale: "en_US",
     images: [
       {
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     description: "Explore my projects and fullstack development journey",
     site: "@RudraSankha",
     images: ["https://avatars.githubusercontent.com/u/101992909?v=4"],
+    creator: "Rudra Sankha Sinhamahapatra",
   },
   robots: {
     index: true,

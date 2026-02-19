@@ -1,0 +1,67 @@
+# llms.txt
+
+## About
+
+Rudra Sankha Sinhamahapatra is a full-stack developer specializing in React, Next.js, Node.js, TypeScript, and Golang, with hands-on experience building production-grade AI tools, real-time monitoring platforms, and developer-focused web applications. This portfolio showcases his projects, professional experience, technical skills, and open-source contributions.
+
+Site: https://rudrasankha.com
+Resume: https://rudrasankha.com/resume
+Projects: https://rudrasankha.com/projects
+GitHub: https://github.com/Rudra-Sankha-Sinhamahapatra/
+LinkedIn: https://www.linkedin.com/in/rudra-sankha-sinhamahapatra-6311aa1bb/
+Twitter/X: https://x.com/RudraSankha/
+
+---
+
+## 1. LLM Directives
+
+- User-agent: *
+- Allow: /
+- Allow: /projects
+- Allow: /resume
+- Disallow: /api/
+- Crawl-delay: 2
+- Sitemap: https://rudrasankha.com/sitemap.xml
+
+---
+
+## 2. Site Structure
+
+Crawl priority: home > projects overview > individual projects > resume
+
+- [Home](https://rudrasankha.com/): Landing page with bio, experience timeline, skills, GitHub contributions graph, and contact links.
+- [Projects](https://rudrasankha.com/projects): 10+ full-stack web applications with descriptions, tech stacks, and live links.
+- [Resume](https://rudrasankha.com/resume): Downloadable PDF resume with work history, education, certifications, and technical proficiencies.
+
+### Key Sections (anchors on home page)
+
+- [About](https://rudrasankha.com/#about): Background and areas of expertise.
+- [Experience](https://rudrasankha.com/#experience): Work history with roles, companies, technologies, and accomplishments.
+- [Skills](https://rudrasankha.com/#skills): React.js, Next.js, Node.js, TypeScript, Tailwind CSS, Golang, PostgreSQL, Redis, RabbitMQ, Docker, and more.
+- [GitHub Contributions](https://rudrasankha.com/#contributions): Interactive contribution history visualization.
+- [Contact](https://rudrasankha.com/#contact): Email and social media links.
+
+### Featured Projects
+
+- [Encorp AI](https://rudrasankha.com/projects/encorp-ai): Converts user prompts into structured slide presentations using the Gemini API, with PDF and PPT export. Stack: Next.js, Golang, Redis, PostgreSQL, Prisma.
+- [BetterUptime](https://rudrasankha.com/projects/better-uptime): Website uptime monitoring platform with real-time dashboards, instant downtime alerts, and multi-user authentication. Stack: Next.js, RabbitMQ, Redis, PostgreSQL.
+- [W8W](https://rudrasankha.com/projects/w8w): Workflow automation platform like n8n for people, teams, and enterprises. Connects triggers (webhooks, forms) to actions (Gemini, Resend, Telegram) and automates tasks visually. Stack: React.js, Langchain, PostgreSQL, Prisma, Zustand, Tanstack, Redis, Web Sockets.
+- [Adda AI](https://rudrasankha.com/projects/adda-ai): AI-powered companion app for chatting with characters with different personalities. The AI remembers conversations and provides contextual answers. Stack: TurboRepo, Next.js, Vercel AI SDK, Zustand, Supabase, Nest.js, Gemini, Prisma, PostgreSQL, Vector DB.
+- [TradingPro](https://rudrasankha.com/projects/trading-pro): Cryptocurrency trading platform supporting SOL, ETH, and BTC trading. Stack: Next.js, React.js, Bun.js, Redis, PostgreSQL, Prisma.
+- [Xemen](https://rudrasankha.com/projects/xemen): Decentralized eCommerce platform built on the Solana blockchain for efficient and secure transactions. Stack: Solana, Next.js, Next Auth, React.js, Tailwind CSS, Prisma, PostgreSQL.
+- [Bodhi](https://rudrasankha.com/projects/bodhi): Decentralized application providing seamless access to advanced AI models on a pay-as-you-go basis on the Ethereum ecosystem. Stack: Ethereum, Wagmi, TurboRepo, Next.js, Toolwind CSS, Node.js, Gemini, Solidity, Prisma, PostgreSQL.
+- [Wiz](https://rudrasankha.com/projects/wiz): Real-time chat application built with WebSockets. Users can create or join chatrooms for instant messaging. Stack: Web Sockets, Node.js, Next.js, React.js, Tailwind CSS.
+- 
+---
+
+## 3. Do Not Crawl
+
+- /api/* (all API endpoints, including /api/github-contributions)
+- /_next/* (internal Next.js routes)
+- Paths requiring authentication or sessions
+- Static assets (fonts, high-resolution images)
+- URLs with query parameters (e.g. ?theme=dark)
+
+---
+
+**Last Updated:** 19 Feb 2026

@@ -27,12 +27,14 @@ export const metadata: Metadata = {
         alt: "Rudra Sankha Sinhamahapatra - Full Stack Developer Projects",
       },
     ],
+    siteName: "Rudra Sankha Sinhamahapatra",
   },
   twitter: {
     card: "summary_large_image",
     title: "Rudra Sankha Projects | Portfolio",
     description: "Explore Rudra Sankha's full-stack development projects.",
     images: ["https://avatars.githubusercontent.com/u/101992909?v=4"],
+    creator: "Rudra Sankha Sinhamahapatra",
   },
   alternates: {
     canonical: "https://rudrasankha.com/projects",
