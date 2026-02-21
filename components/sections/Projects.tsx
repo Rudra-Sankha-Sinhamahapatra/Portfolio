@@ -9,8 +9,6 @@ export default function Projects() {
         <div
           key={project.id}
           className="
-            bg-white 
-            dark:bg-[#1C1C1C]
             rounded-xl 
             overflow-hidden 
             shadow-lg 
@@ -32,7 +30,7 @@ export default function Projects() {
             />
             
             <div className="absolute bottom-0 w-full p-3 bg-linear-to-t from-black/80 via-black/40 to-transparent">
-              <h3 className="font-normal text-[#ffffff] text-sm sm:text-base m-0 line-clamp-1 wrap-break-word">
+              <h3 className="font-bold text-[#ffffff] text-sm sm:text-base m-0 line-clamp-1 wrap-break-word">
                 {project.title}
               </h3>
             </div>
@@ -42,22 +40,13 @@ export default function Projects() {
             <Link 
               href={`/projects/${project.id}`}
               className="
-                w-full 
-                rounded-lg 
-                bg-neutral-100 
-                dark:bg-[#2E2E2E] 
-                border border-neutral-300 
+                w-full
                 dark:border-[#3E3E3E] 
                 px-4 sm:px-5 
                 py-3 sm:py-4 
-                text-neutral-700 
-                dark:text-[#a8a8a8] 
+                 bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 rounded-lg font-semibold hover:scale-105
                 text-sm sm:text-base 
-                transition-colors 
-                duration-150 
                 text-center 
-                hover:bg-neutral-200 
-                dark:hover:bg-[#3E3E3E]
                 flex 
                 items-center 
                 justify-center 

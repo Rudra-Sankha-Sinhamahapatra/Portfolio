@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 export default function About() {
   return (
     <section id="about">
-      <div className="bg-[#141313]/80 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden dark:bg-[#141313]/80 dark:border-white/10">
+      <div className="backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden dark:bg-[#141313]/80 dark:border-white/10">
         <div className="h-48 lg:h-64 bg-linear-to-br from-blue-600 via-indigo-400 to-cyan-400 relative">
           <img
             src="https://pbs.twimg.com/media/HAuqGpNboAAbZSP?format=png&name=900x900"
@@ -16,19 +16,19 @@ export default function About() {
           />
         </div>
 
-        <div className="bg-[#141313] px-6 lg:px-8 pb-8 dark:bg-[#141313]">
+        <div className="bg-[#141313] px-6 lg:px-8 pb-8">
           <div className="flex justify-between items-start -mt-16 lg:-mt-20 mb-4">
             <img
               src="https://avatars.githubusercontent.com/u/101992909?v=4"
               alt="Profile"
-              className="h-32 w-32 lg:h-40 lg:w-40 rounded-full object-cover shadow-xl border-4 border-[#141313] bg-[#141313] dark:border-[#141313] dark:bg-[#141313] relative z-10"
+              className="h-32 w-32 lg:h-40 lg:w-40 rounded-full object-cover shadow-xl border-4 border-[#f7fafc] bg-[#141313] dark:border-[#141313] dark:bg-[#141313] relative z-10"
             />
             
             <div className="flex gap-2 mt-24 z-10">
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
+                className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold hover:scale-105 cursor-pointer"
                 onClick={() => window.open('https://github.com/Rudra-Sankha-Sinhamahapatra', '_blank')}
               >
                 <Github className="h-4 w-4" />
@@ -37,7 +37,7 @@ export default function About() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-semibold hover:scale-105"
+                  className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-semibold hover:scale-105 cursor-pointer"
                 >
                   <FileText className="h-4 w-4 mr-2" />
                   Resume
@@ -99,7 +99,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold hover:scale-105 cursor-pointer"
               onClick={() => window.open('https://github.com/Rudra-Sankha-Sinhamahapatra', '_blank')}
             >
               <Github className="h-4 w-4 mr-2" />
@@ -108,7 +108,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold hover:scale-105 cursor-pointer"
               onClick={() => window.open('https://x.com/RudraSankha', '_blank')}
             >
               <Twitter className="h-4 w-4 mr-2" />
@@ -117,7 +117,7 @@ export default function About() {
             <Button
               variant="outline"
               size="sm"
-              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold"
+              className="bg-white/10 dark:bg-[#141313] border border-white/20 text-white hover:bg-white/20 transition-all duration-300 font-semibold hover:scale-105 cursor-pointer"
               onClick={() => window.open('https://www.linkedin.com/in/rudra-sankha-sinhamahapatra-6311aa1bb/', '_blank')}
             >
               <Linkedin className="h-4 w-4 mr-2" />

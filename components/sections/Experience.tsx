@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Experience as Exp, experiences, keywords } from "@/lib/experience";
 import React, { useState } from "react";
 import { getSkillIcon } from "@/lib/skillUtils";
-import { GitPullRequest, ExternalLink } from "lucide-react";
+import { GitPullRequest, ExternalLink, X } from "lucide-react";
 
 export default function Experience() {
   const [selectedExperience, setSelectedExperience] = useState<Exp | null>(null);
@@ -30,7 +30,7 @@ export default function Experience() {
   return (
     <>
       <section id="experience">
-        <div className="dark:bg-[#141313]/80 bg-white/80 backdrop-blur-lg rounded-xl border border-white/10 p-8">
+        <div className="bg-[#141313] backdrop-blur-lg rounded-xl border border-white/10 p-8">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="text-2xl font-bold text-white">Professional Experience</h2>
           </div>
@@ -42,7 +42,7 @@ export default function Experience() {
                 onClick={() => openExperienceModal(exp)}
                 className="group cursor-pointer"
               >
-                <div className="flex items-center justify-between hover:bg-white/5 p-4 rounded-lg transition-all duration-300">
+                <div className="flex items-center justify-between hover:bg-white/10 p-4 rounded-lg transition-all duration-300">
                   <div className="flex items-center space-x-4">
                     {exp.companyLogo && (
                       <Image
@@ -58,7 +58,10 @@ export default function Experience() {
                       <p className="text-gray-400 text-sm">{exp.title}</p>
                     </div>
                   </div>
+                  <div className="flex items-center space-x-2">
+                 <span className="text-gray-500 text-sm">{exp.location}</span>
                   <span className="text-gray-500 text-sm">{exp.duration}</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -68,16 +71,15 @@ export default function Experience() {
 
       {selectedExperience && (
         <div 
-          className="fixed inset-0 dark:bg-black/50 bg-white/50 z-100 flex items-center justify-center p-4"
+          className="fixed inset-0 z-9999 flex items-center justify-center p-4"
           onClick={closeModal}
         >
           <div 
             className="
-              bg-white dark:bg-[#141313] 
-              rounded-xl max-w-2xl w-full p-8 relative 
+              rounded-xl max-w-2xl w-full p-8 mt-10 relative bg-[#141313]
               border border-gray-200 dark:border-white/10 
-              shadow-2xl
-              max-h-[90vh] overflow-y-auto
+              shadow-2xl z-100
+              max-h-[80vh] overflow-y-auto
             "
             onClick={(e) => e.stopPropagation()}
           >
@@ -85,13 +87,13 @@ export default function Experience() {
               onClick={closeModal}
               className="
                 absolute top-4 right-4 
-                text-gray-700 dark:text-white 
-                hover:text-gray-500 dark:hover:text-gray-300 
+                hover:text-gray-500
                 transition-colors
+                cursor-pointer
                 focus:outline-none
               "
             >
-              ✕
+              <X />
             </button>
 
             <div className="flex items-center space-x-4 mb-6">
@@ -105,15 +107,17 @@ export default function Experience() {
                 />
               )}
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{selectedExperience.company}</h2>
+                <h2 className="text-2xl font-bold">{selectedExperience.company}</h2>
                 <p className="text-blue-600 dark:text-blue-400 text-lg">{selectedExperience.title}</p>
+                <p className="text-sm">{selectedExperience.duration}</p>
+                <p className="text-sm">{selectedExperience.location}</p>
               </div>
             </div>
 
             <div className="space-y-4">
-              <div className="bg-gray-100 dark:bg-[#1E1E1E] rounded-lg p-4">
-                <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Responsibilities</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+              <div className="bg-white/10 dark:bg-[#141313] border border-white/20 dark:border-white/10 text-white transition-all duration-300 py-2 px-4 font-semibold rounded-lg p-4 shadow-sm">
+                <h3 className="font-semibold mb-2">Responsibilities</h3>
+                <p className="text-sm leading-relaxed">
                   {selectedExperience.description.map((point, i) => (
                     <React.Fragment key={i}>
                       {highlightKeywords(point)}
@@ -123,8 +127,8 @@ export default function Experience() {
                 </p>
               </div>
 
-              <div className="bg-gray-100 dark:bg-[#1E1E1E] rounded-lg p-4">
-                <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Tech Stack</h3>
+              <div className="bg-white/10 dark:bg-[#141313] border border-white/20 dark:border-white/10 text-white transition-all duration-300 py-2 px-4 font-semibold rounded-lg p-4 shadow-sm">
+                <h3 className="font-semibold mb-2">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedExperience.techStacks.map((stack, stackIndex) => {
                     const skillIcon = getSkillIcon(stack);
@@ -133,7 +137,7 @@ export default function Experience() {
                         key={stackIndex}
                         className="
                           rounded-full 
-                          bg-gray-200 dark:bg-[#141313] 
+                        bg-[#141313] 
                           px-3 py-1 text-sm 
                           text-gray-700 dark:text-gray-300 
                           border border-gray-300 dark:border-white/20
@@ -159,10 +163,10 @@ export default function Experience() {
               </div>
 
               {selectedExperience.prs && selectedExperience.prs.length > 0 && (
-                <div className="bg-gray-100 dark:bg-[#1E1E1E] rounded-lg p-4">
-                  <h3 className="text-gray-900 dark:text-white font-semibold mb-3 flex items-center gap-2">
+                <div className="bg-white/10 dark:bg-[#141313] border text-white border-white/20 dark:border-white/10transition-all duration-300 py-2 px-4 font-semibold rounded-lg p-4 shadow-sm">
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
                     <GitPullRequest className="w-5 h-5 text-green-500" />
-                    Merged Pull Requests
+                    Top Merged Pull Requests
                   </h3>
                   <div className="flex flex-col gap-3">
                     {selectedExperience.prs.map((pr, prIndex) => (
@@ -173,14 +177,13 @@ export default function Experience() {
                         rel="noopener noreferrer"
                         className="
                           group flex items-center justify-between
-                          bg-white dark:bg-[#141313] 
-                          p-3 rounded-md shadow-sm
-                          border border-gray-200 dark:border-white/10
+                          p-3 rounded-md shadow-sm bg-[#141313]
+                          border border-white/20 dark:border-white/10
                           hover:border-blue-500 dark:hover:border-blue-400
                           transition-all duration-200 hover:-translate-y-0.5
                         "
                       >
-                        <span className="text-gray-800 dark:text-gray-200 text-sm font-medium pr-4 line-clamp-2">
+                        <span className="text-sm font-medium pr-4 line-clamp-2">
                           {pr.title}
                         </span>
                         <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 opacity-50 group-hover:opacity-100 transition-all shrink-0" />
