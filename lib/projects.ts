@@ -10,6 +10,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'conar',
+    image: "https://conar.app/demo-dark-4.png",
+    title: "Conar",
+    description: "Conar is the open-source database client to work with PostgreSQL, MySQL, MSSQL, ClickHouse etc. Securely connect, query, and manage your databases with a beautiful, intuitive interface.",
+    link: "https://github.com/wannabespace/conar",
+    liveLink: "https://conar.app",
+    techStacks: ["Electron", "React.js", "oRPC", "Hono", "Drizzle ORM", "Tanstack Query", "Better Auth", "AI SDK"]
+  },
+  {
     id: 'encorp-ai',
     image: "https://pbs.twimg.com/media/G3iNa8WXEAAYwDo?format=jpg&name=medium",
     title: "Encorp AI",

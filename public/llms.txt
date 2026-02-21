@@ -44,6 +44,7 @@ Crawl priority: home > projects overview > individual projects > resume
 ### Featured Projects
 
 - [Encorp AI](https://rudrasankha.com/projects/encorp-ai): Converts user prompts into structured slide presentations using the Gemini API, with PDF and PPT export. Stack: Next.js, Golang, Redis, PostgreSQL, Prisma.
+- [Conar App](https://conar.app): Conar is the open-source database client to work with PostgreSQL, MySQL, MSSQL, ClickHouse etc. Securely connect, query, and manage your databases with a beautiful, intuitive interface. Stack: Electron, React.js, oRPC, Hono, Drizzle ORM, Tanstack Query, Better Auth, AI SDK.
 - [BetterUptime](https://rudrasankha.com/projects/better-uptime): Website uptime monitoring platform with real-time dashboards, instant downtime alerts, and multi-user authentication. Stack: Next.js, RabbitMQ, Redis, PostgreSQL.
 - [W8W](https://rudrasankha.com/projects/w8w): Workflow automation platform like n8n for people, teams, and enterprises. Connects triggers (webhooks, forms) to actions (Gemini, Resend, Telegram) and automates tasks visually. Stack: React.js, Langchain, PostgreSQL, Prisma, Zustand, Tanstack, Redis, Web Sockets.
 - [Adda AI](https://rudrasankha.com/projects/adda-ai): AI-powered companion app for chatting with characters with different personalities. The AI remembers conversations and provides contextual answers. Stack: TurboRepo, Next.js, Vercel AI SDK, Zustand, Supabase, Nest.js, Gemini, Prisma, PostgreSQL, Vector DB.
@@ -51,7 +52,6 @@ Crawl priority: home > projects overview > individual projects > resume
 - [Xemen](https://rudrasankha.com/projects/xemen): Decentralized eCommerce platform built on the Solana blockchain for efficient and secure transactions. Stack: Solana, Next.js, Next Auth, React.js, Tailwind CSS, Prisma, PostgreSQL.
 - [Bodhi](https://rudrasankha.com/projects/bodhi): Decentralized application providing seamless access to advanced AI models on a pay-as-you-go basis on the Ethereum ecosystem. Stack: Ethereum, Wagmi, TurboRepo, Next.js, Toolwind CSS, Node.js, Gemini, Solidity, Prisma, PostgreSQL.
 - [Wiz](https://rudrasankha.com/projects/wiz): Real-time chat application built with WebSockets. Users can create or join chatrooms for instant messaging. Stack: Web Sockets, Node.js, Next.js, React.js, Tailwind CSS.
-- 
 ---
 
 ## 3. Do Not Crawl

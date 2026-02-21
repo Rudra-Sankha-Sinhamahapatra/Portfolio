@@ -31,6 +31,11 @@ const nextConfig = {
         hostname: 'images.seeklogo.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        pathname: '/**',
+      },
     ],
   },
   async rewrites() {

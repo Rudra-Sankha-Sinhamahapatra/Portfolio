@@ -1,3 +1,8 @@
+export interface PR {
+  url: string;
+  title: string;
+}
+
 export interface Experience {
     title: string;
     company: string;
@@ -6,6 +11,7 @@ export interface Experience {
     location: string;
     description: string[];
     techStacks: string[];
+    prs?: PR[];
   }
   
   export const keywords = [
@@ -27,6 +33,23 @@ export interface Experience {
   ];
 
   export const experiences: Experience[] = [
+    {
+      title: "Open Source Developer",
+      company: "Wannabespace (Conar)",
+      companyLogo: "https://media.licdn.com/dms/image/v2/D560BAQEql42FV3Kk4Q/company-logo_200_200/B56Zst0aUeIEAI-/0/1766000273127/wannabe_school_logo?e=1773273600&v=beta&t=_OODdSGt-mhiDT0qPPYz5yideAFoZIZCwKTl8Gu3hP0",
+      duration: "Nov 2025 - Present",
+      location: "Remote",
+      description: [
+        "Contributed to Conar, an open-source database client by Wannabespace, focusing on major enhancements and feature development.",
+        "Successfully merged over 25+ PRs, significantly improving the platform's functionality and performance."
+      ],
+      techStacks: ["Electron", "React.js", "oRPC", "Hono", "Drizzle ORM", "Tanstack Query", "Better Auth", "AI SDK"],
+      prs: [
+        { title: "feat(desktop): adds indexes and constraints page (#269)", url: "https://github.com/wannabespace/conar/pull/269" },
+        { title: "feat(connection): adds connection version (#318)", url: "https://github.com/wannabespace/conar/pull/318" },
+        { title: "feat(schema): adds table schema & query copy (#275)", url: "https://github.com/wannabespace/conar/pull/275" }
+      ]
+    },
     {
       title: "Full Stack Developer Intern",
       company: "FirstList",

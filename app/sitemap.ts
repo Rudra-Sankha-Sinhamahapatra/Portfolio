@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/Resume.pdf`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.8 },
     { url: `${SITE_URL}/projects`, lastModified: new Date(), changeFrequency: "daily" as const, priority: 0.9 },
     { url: `${SITE_URL}/projects/encorp-ai`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/projects/conar`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/projects/better-uptime`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/projects/w8w`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/projects/adda-ai`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 },

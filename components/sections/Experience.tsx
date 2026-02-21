@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Experience as Exp, experiences, keywords } from "@/lib/experience";
 import React, { useState } from "react";
 import { getSkillIcon } from "@/lib/skillUtils";
+import { GitPullRequest, ExternalLink } from "lucide-react";
 
 export default function Experience() {
   const [selectedExperience, setSelectedExperience] = useState<Exp | null>(null);
@@ -29,7 +30,7 @@ export default function Experience() {
   return (
     <>
       <section id="experience">
-        <div className="bg-[#141313]/80 backdrop-blur-lg rounded-xl border border-white/10 p-8">
+        <div className="dark:bg-[#141313]/80 bg-white/80 backdrop-blur-lg rounded-xl border border-white/10 p-8">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="text-2xl font-bold text-white">Professional Experience</h2>
           </div>
@@ -67,7 +68,7 @@ export default function Experience() {
 
       {selectedExperience && (
         <div 
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 dark:bg-black/50 bg-white/50 z-100 flex items-center justify-center p-4"
           onClick={closeModal}
         >
           <div 
@@ -76,6 +77,7 @@ export default function Experience() {
               rounded-xl max-w-2xl w-full p-8 relative 
               border border-gray-200 dark:border-white/10 
               shadow-2xl
+              max-h-[90vh] overflow-y-auto
             "
             onClick={(e) => e.stopPropagation()}
           >
@@ -155,6 +157,38 @@ export default function Experience() {
                   })}
                 </div>
               </div>
+
+              {selectedExperience.prs && selectedExperience.prs.length > 0 && (
+                <div className="bg-gray-100 dark:bg-[#1E1E1E] rounded-lg p-4">
+                  <h3 className="text-gray-900 dark:text-white font-semibold mb-3 flex items-center gap-2">
+                    <GitPullRequest className="w-5 h-5 text-green-500" />
+                    Merged Pull Requests
+                  </h3>
+                  <div className="flex flex-col gap-3">
+                    {selectedExperience.prs.map((pr, prIndex) => (
+                      <a
+                        key={prIndex}
+                        href={pr.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                          group flex items-center justify-between
+                          bg-white dark:bg-[#141313] 
+                          p-3 rounded-md shadow-sm
+                          border border-gray-200 dark:border-white/10
+                          hover:border-blue-500 dark:hover:border-blue-400
+                          transition-all duration-200 hover:-translate-y-0.5
+                        "
+                      >
+                        <span className="text-gray-800 dark:text-gray-200 text-sm font-medium pr-4 line-clamp-2">
+                          {pr.title}
+                        </span>
+                        <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 opacity-50 group-hover:opacity-100 transition-all shrink-0" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
