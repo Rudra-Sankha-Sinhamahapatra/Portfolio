@@ -29,11 +29,25 @@ export const skills: Skills[] = [
    visibility: true,
   },
   {
+   name: "Electron js",
+   icon: "https://icons.duckduckgo.com/ip3/www.electronjs.org.ico",
+   height: "5",
+   width: "5",
+   visibility: false,
+  }, 
+  {
     name: "Tailwind Css",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/tailwindcss-icon-lxvdm2ckbakronpli3lie.png/tailwindcss-icon-w2935uwocqtqvv7q2q257.png?_a=DAJFJtWIZAAC",
     height: "5",
     width: "5",
     visibility: true
+  },
+  {
+   name: "Tanstack Query",
+   icon: "https://icons.duckduckgo.com/ip3/tanstack.com.ico",
+   height: "5",
+   width: "5",
+   visibility: true
   },
   {
     name: "Zustand",
@@ -71,11 +85,46 @@ export const skills: Skills[] = [
     visibility: false
   },
   {
+   name: "Hono",
+   icon: "https://hono.dev/images/logo.svg",
+   height: "5",
+   width: "5",
+   visibility: false
+  },
+  {
+    name: "Nodemailer",
+    icon: "https://icons.duckduckgo.com/ip3/nodemailer.com.ico",
+    height: "5",
+    width: "5",
+    visibility: false
+  },
+  {
     name: "Typescript",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/5/typescript-icon-72zw2qe1mom0nafkd5pj6n.png/typescript-icon-lks16d1xu9b9qyidink7t.png?_a=DAJFJtWIZAAC",
     height: "5",
     width: "5",
     visibility: true
+  },
+  {
+    name: "PPTGenx",
+    icon: "https://gitbrent.github.io/PptxGenJS/img/favicon.png",
+    height: "12",
+    width: "12",
+    visibility: false
+  },
+  {
+    name: "Jspdf",
+    icon: "https://icons.duckduckgo.com/ip3/parall.ax.ico",
+    height: "5",
+    width: "5",
+    visibility: false
+  },
+  {
+   name: "oRPC",
+   icon: "https://orpc.dev/logo.webp",
+   height: "8",
+   width: "8",
+   visibility: false
   },
   {
     name: "Golang",
@@ -94,6 +143,13 @@ export const skills: Skills[] = [
   {
     name: "Prisma",
     icon: "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20id%3D%22Prisma--Streamline-Svg-Logos%22%20height%3D%2224%22%20width%3D%2224%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Prisma%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Cpath%20fill%3D%22%2318ea94%22%20d%3D%22M21.602%2018.15365%2013.520475%200.9913025c-0.204575%20-0.4302975%20-0.6286%20-0.7138%20-1.104425%20-0.7384225%20-0.4769%20-0.0319545%20-0.932%200.203975%20-1.180775%200.6121225L2.46995%2015.0619c-0.272115%200.43765%20-0.26639%200.993225%200.0146875%201.42515L6.770075%2023.123475c0.332975%200.511625%200.962825%200.74325%201.547925%200.569225l12.436325%20-3.6786c0.37885%20-0.110775%200.691075%20-0.38035%200.8559%20-0.739%200.1626%20-0.35695%200.1598%20-0.76735%20-0.007625%20-1.12205l-0.0006%200.0006Zm-1.809325%200.736075L9.239725%2022.01025c-0.321925%200.09575%20-0.630925%20-0.183275%20-0.56395%20-0.50815l3.77025%20-18.0529c0.0705%20-0.3378%200.536925%20-0.39125%200.684375%20-0.078725l6.9795%2014.82135c0.06245%200.133675%200.0632%200.287975%200.00205%200.42225%20-0.06115%200.134275%20-0.17805%200.235%20-0.319875%200.27565h0.0006Z%22%20stroke-width%3D%220.25%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
+    height: "5",
+    width: "5",
+    visibility: true
+  },
+  {
+    name: "Drizzle",
+    icon: "https://icons.duckduckgo.com/ip3/orm.drizzle.team.ico",
     height: "5",
     width: "5",
     visibility: true
@@ -149,10 +205,17 @@ export const skills: Skills[] = [
   },
   {
     name: "Supabase",
-    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/supabase-icon-kpjasdqlnu8exakst6f44r.png/supabase-icon-5uqgeeqeknngv9las8zeef.png?_a=DAJFJtWIZAAC",
+    icon: "https://supabase.com/dashboard/img/supabase-logo.svg",
     height: "5",
     width: "5",
     visibility: false
+  },
+  {
+    name: "Vector DB",
+    icon: "https://supabase.com/dashboard/img/supabase-logo.svg",
+    height: "5",
+    width: "5",
+    visibility: true
   },
   {
     name: "Websockets",
@@ -161,6 +224,7 @@ export const skills: Skills[] = [
     width: "5",
     visibility: true
   },
+
   {
     name: "Redis",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/redis-y590aw1nivh089zznjv43zu.png/redis-dzuksy8u5fiwy59bvnw4pp.png?_a=DAJFJtWIZAAC",
@@ -177,7 +241,7 @@ export const skills: Skills[] = [
   },
   {
     name: "Solana",
-    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/solana-nt0msuwt0fdbaid1cv02s.png/solana-jsn2kuwq8fhmwr72f3goq.png?_a=DATAg1AAZAA0",
+    icon: "https://icons.duckduckgo.com/ip3/solana.com.ico",
     height: "5",
     width: "5",
     visibility: false
@@ -203,4 +267,39 @@ export const skills: Skills[] = [
     width: "5",
     visibility: true
   },
+  {
+    name: "Better Auth",
+    icon: "https://icons.duckduckgo.com/ip3/www.better-auth.com.ico",
+    height: "5",
+    width: "5",
+    visibility: true
+  },
+  {
+    name: "Next Auth",
+    icon: "https://icons.duckduckgo.com/ip3/next-auth.js.org.ico",
+    height: "5",
+    width: "5",
+    visibility: true
+  },
+  {
+    name: "Solidity",
+    icon: "https://icons.duckduckgo.com/ip3/www.soliditylang.org.ico",
+    height: "5",
+    width: "5",
+    visibility: false
+  },
+  {
+   name: "Ethereum",
+   icon: "https://icons.duckduckgo.com/ip3/www.ethereum.org.ico",
+   height: "5",
+   width: "5",
+   visibility: false
+  },
+  {
+    name: "Wagmi",
+    icon: "https://wagmi.sh/logo-dark.svg",
+    height: "8",
+    width: "8",
+    visibility: false
+  }
 ];

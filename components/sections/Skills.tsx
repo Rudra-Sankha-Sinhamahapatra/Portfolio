@@ -27,7 +27,7 @@ export const Skills = () => {
 
   return (
     <section id="skills">
-      <div className="bg-[#141313]/80 dark:bg-[#141313]/80 light:bg-white/10 backdrop-blur-lg rounded-xl border border-white/10 dark:border-white/10 light:border-blue-100/20 p-8">
+      <div className="bg-[#141313] backdrop-blur-lg rounded-xl border border-white/10 dark:border-white/10 light:border-blue-100/20 p-8">
         <div className="flex items-center gap-3 mb-6">
           <h2 className="text-2xl font-bold text-white dark:text-white light:text-gray-800">Tech Stacks</h2>
         </div>

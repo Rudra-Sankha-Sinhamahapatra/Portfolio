@@ -36,6 +36,36 @@ const nextConfig = {
         hostname: 'media.licdn.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'conar.app',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'icons.duckduckgo.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'orpc.dev',
+        pathname: '/**',
+      }, 
+      {
+        protocol: 'https',
+        hostname: 'wagmi.sh',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'gitbrent.github.io',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'supabase.com',
+        pathname: '/**',
+      }
     ],
   },
   async rewrites() {
