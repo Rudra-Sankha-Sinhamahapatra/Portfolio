@@ -1,5 +1,7 @@
 # llms.txt
 
+> A personal portfolio website showcasing the projects, professional experience, and technical skills of Rudra Sankha Sinhamahapatra, a Full Stack Developer.
+
 ## About
 
 Rudra Sankha Sinhamahapatra is a full-stack developer specializing in React, Next.js, Node.js, TypeScript, and Golang, with hands-on experience building production-grade AI tools, real-time monitoring platforms, and developer-focused web applications. This portfolio showcases his projects, professional experience, technical skills, and open-source contributions.
@@ -64,4 +66,18 @@ Crawl priority: home > projects overview > individual projects > resume
 
 ---
 
-**Last Updated:** 19 Feb 2026
+## 4. Project Details
+
+This section provides details about the current project—the personal portfolio website of Rudra Sankha Sinhamahapatra.
+
+### Rudra Sankha Portfolio
+- **URL:** https://rudrasankha.com
+- **Description:** A modern, highly optimized personal portfolio website showcasing professional experience, skills, and open-source contributions of Rudra Sankha Sinhamahapatra. Rudra Sankha Sinhamahapatra is a Full Stack Developer who is passionate about building AI-powered tools and platforms. He is also an open-source contributor and has contributed to various open-source projects.
+- **Developer:** Rudra Sankha Sinhamahapatra (Full Stack Developer)
+- **Code Repository:** https://github.com/Rudra-Sankha-Sinhamahapatra/Portfolio
+- **Key Tech Stack:** Next.js 15, React, TypeScript, Tailwind CSS, Framer Motion, Vercel
+- **Features:** Responsive dark/light theme, dynamic metadata generation for SEO, sitemap generation, interactive GitHub contribution graphs, and optimized component rendering.
+
+---
+
+**Last Updated:** 23 Feb 2026
