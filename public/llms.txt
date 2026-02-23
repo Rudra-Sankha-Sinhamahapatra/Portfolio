@@ -80,4 +80,14 @@ This section provides details about the current project—the personal portfolio
 
 ---
 
+## 5. Documentation
+
+- [Home](https://rudrasankha.com/)
+- [Projects](https://rudrasankha.com/projects)
+- [Resume](https://rudrasankha.com/resume)
+- [Sitemap](https://rudrasankha.com/sitemap.xml)
+- [Public Repository](https://github.com/Rudra-Sankha-Sinhamahapatra/Portfolio)
+
+---
+
 **Last Updated:** 23 Feb 2026
