@@ -32,7 +32,7 @@ export default function ResumePage() {
                   Rudra Sankha Resume
                 </h1>
                 <p className="text-lg text-gray-400 mb-6">
-                  Full Stack Developer skilled in React, Next.js, TypeScript, AWS,
+                  Full Stack Developer skilled in React, React Native, Next.js, TypeScript, AWS,
                   Docker, Redis and Node.js. Download my resume to view my
                   experience, skills, and projects.
                 </p>

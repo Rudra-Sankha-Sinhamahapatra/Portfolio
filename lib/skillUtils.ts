@@ -63,14 +63,14 @@ export const getSkillIcon = (techName: string) => {
     };
     
     const mappedSkillName = specialCases[normalizedTechName];
-    console.log(`Mapped skill name: ${mappedSkillName}`);
+    // console.log(`Mapped skill name: ${mappedSkillName}`);
     
     if (mappedSkillName) {
       skill = skills.find(s => s.name === mappedSkillName);
     }
   }
   
-  console.log(`Found skill:`, skill);
+  // console.log(`Found skill:`, skill);
   
   return skill ? { icon: skill.icon, width: skill.width, height: skill.height } : null;
 };

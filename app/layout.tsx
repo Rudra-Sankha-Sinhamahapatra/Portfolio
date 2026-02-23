@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Full Stack Developer",
   },
   description:
-    "I'm a Full Stack Developer skilled in React, Next.js, TypeScript, AWS, Docker, Redis and Node.js. Check out my projects, resume, and portfolio!",
+    "I'm a Full Stack Developer skilled in React, React Native, Next.js, TypeScript, AWS, Docker, Redis and Node.js. Check out my projects, resume, and portfolio!",
   keywords: ["Rudra Sankha", "Rudra Sankha Sinhamahapatra", "Full Stack Developer"],
   openGraph: {
     title: "Rudra Sankha Sinhamahapatra  | Full Stack Developer",
@@ -49,7 +49,10 @@ export const metadata: Metadata = {
     description: "Explore my projects and fullstack development journey",
     site: "@RudraSankha",
     images: ["https://avatars.githubusercontent.com/u/101992909?v=4"],
-    creator: "Rudra Sankha Sinhamahapatra",
+    creator: "@RudraSankha",
+  },
+  alternates: {
+    canonical: "https://rudrasankha.com",
   },
   robots: {
     index: true,
@@ -62,6 +65,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest"
 };
 
 export default function RootLayout({

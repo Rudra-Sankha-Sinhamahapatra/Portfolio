@@ -4,7 +4,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Rudra Sankha Resume",
   description:
-    "Download Rudra Sankha's resume and CV. Full Stack Developer skilled in React, Next.js, TypeScript, AWS, Node.js. View experience, skills, and projects.",
+    "Download Rudra Sankha's resume and CV. Full Stack Developer skilled in React, React Native, Next.js, TypeScript, AWS, Node.js. View experience, skills, and projects.",
   keywords: [
     "Rudra Sankha Resume",
     "Rudra Sankha CV",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rudra Sankha Resume | Full Stack Developer CV",
     description:
-      "Download Rudra Sankha's resume. Full Stack Developer with expertise in React, Next.js, TypeScript, AWS, Docker, Redis and Node.js.",
+      "Download Rudra Sankha's resume. Full Stack Developer with expertise in React, React Native, Next.js, TypeScript, AWS, Docker, Redis and Node.js.",
     url: "https://rudrasankha.com/resume",
     type: "website",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Rudra Sankha Resume | Full Stack Developer",
     description: "Download Rudra Sankha's resume and CV. Full Stack Developer portfolio.",
     images: ["https://avatars.githubusercontent.com/u/101992909?v=4"],
-    creator: "Rudra Sankha Sinhamahapatra",
+    creator: "@RudraSankha",
   },
   alternates: {
     canonical: "https://rudrasankha.com/resume",

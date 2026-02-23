@@ -34,7 +34,7 @@ export interface Experience {
 
   export const experiences: Experience[] = [
     {
-      title: "Open Source Developer",
+      title: "Open Source Contributor",
       company: "Wannabespace (Conar)",
       companyLogo: "https://media.licdn.com/dms/image/v2/D560BAQEql42FV3Kk4Q/company-logo_200_200/B56Zst0aUeIEAI-/0/1766000273127/wannabe_school_logo?e=1773273600&v=beta&t=_OODdSGt-mhiDT0qPPYz5yideAFoZIZCwKTl8Gu3hP0",
       duration: "Nov 2025 - Present",

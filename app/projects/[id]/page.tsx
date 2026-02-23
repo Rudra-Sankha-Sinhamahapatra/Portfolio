@@ -1,40 +1,58 @@
-"use client";
-
-import { use } from "react";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub, FaArrowLeft } from "react-icons/fa";
 import { getSkillIcon } from "@/lib/skillUtils";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import type { Metadata } from "next";
 
-export default function ProjectDetailPage({
-    params
-}: {
+type Props = {
     params: Promise<{ id: string }>;  
-}) {
-    const { id } = use(params);  
+};
 
-    const [project, setProject] = useState<typeof projects[0] | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        function findProject() {
-            const foundProject = projects.find(p => p.id === id);
-            setProject(foundProject || null);
-            setLoading(false);
-        }
-
-        findProject();
-    }, [id]);
-
-    if (loading) {
-        return (
-            <div className="container mx-auto px-6 py-24 text-center">
-                <h1 className="text-4xl font-bold text-white mb-4">Loading Project...</h1>
-            </div>
-        );
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { id } = await params;
+    const project = projects.find(p => p.id === id);
+    
+    if (!project) {
+        return {
+            title: "Project Not Found | Rudra Sankha Sinhamahapatra",
+        };
     }
+
+    return {
+        title: `${project.title} | Rudra Sankha Sinhamahapatra`,
+        description: project.description,
+        keywords: [
+            project.title,
+            "Rudra Sankha Projects",
+            "Rudra Sankha Sinhamahapatra",
+            "Full Stack Developer",
+            ...(project.techStacks || [])
+        ],
+        openGraph: {
+            title: `${project.title} | Rudra Sankha Sinhamahapatra`,
+            description: project.description,
+            url: `https://rudrasankha.com/projects/${project.id}`,
+            type: "website",
+            images: project.image ? [{ url: project.image, alt: project.title }] : [],
+            siteName: "Rudra Sankha Sinhamahapatra",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${project.title} | Rudra Sankha Sinhamahapatra`,
+            description: project.description,
+            images: project.image ? [project.image] : [],
+            creator: "@RudraSankha",
+        },
+        alternates: {
+            canonical: `https://rudrasankha.com/projects/${project.id}`,
+        },
+    };
+}
+
+export default async function ProjectDetailPage({ params }: Props) {
+    const { id } = await params;
+    const project = projects.find(p => p.id === id);
 
     if (!project) {
         return (

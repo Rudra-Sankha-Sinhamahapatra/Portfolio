@@ -4,7 +4,7 @@
 
 ## About
 
-Rudra Sankha Sinhamahapatra is a full-stack developer specializing in React, Next.js, Node.js, TypeScript, and Golang, with hands-on experience building production-grade AI tools, real-time monitoring platforms, and developer-focused web applications. This portfolio showcases his projects, professional experience, technical skills, and open-source contributions.
+Rudra Sankha Sinhamahapatra is a full-stack developer specializing in React, React Native, Next.js, Node.js, TypeScript, and Golang, with hands-on experience building production-grade AI tools, real-time monitoring platforms, and developer-focused web applications. This portfolio showcases his projects, professional experience, technical skills, and open-source contributions.
 
 Site: https://rudrasankha.com
 Resume: https://rudrasankha.com/resume

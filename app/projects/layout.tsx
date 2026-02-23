@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Rudra Sankha Projects | Portfolio",
     description: "Explore Rudra Sankha's full-stack development projects.",
     images: ["https://avatars.githubusercontent.com/u/101992909?v=4"],
-    creator: "Rudra Sankha Sinhamahapatra",
+    creator: "@RudraSankha",
   },
   alternates: {
     canonical: "https://rudrasankha.com/projects",

@@ -1,0 +1,16 @@
+{
+  "name": "Rudra Sankha Sinhamahapatra Portfolio",
+  "short_name": "Rudra Portfolio",
+  "description": "I'm a Full Stack Developer skilled in React, React Native, Next.js, TypeScript, AWS, Docker, Redis and Node.js.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111010",
+  "theme_color": "#111010",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
