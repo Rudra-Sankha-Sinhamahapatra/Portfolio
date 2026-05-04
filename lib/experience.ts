@@ -36,8 +36,8 @@ export interface Experience {
     {
       title: "Open Source Contributor",
       company: "Wannabespace (Conar)",
-      companyLogo: "https://media.licdn.com/dms/image/v2/D560BAQEql42FV3Kk4Q/company-logo_200_200/B56Zst0aUeIEAI-/0/1766000273127/wannabe_school_logo?e=1773273600&v=beta&t=_OODdSGt-mhiDT0qPPYz5yideAFoZIZCwKTl8Gu3hP0",
-      duration: "Nov 2025 - Present",
+      companyLogo: "https://media.licdn.com/dms/image/v2/D560BAQEql42FV3Kk4Q/company-logo_200_200/B56Zst0aUeIEAI-/0/1766000273127/wannabe_school_logo?e=1779321600&v=beta&t=t5ToHH4msXQX5tED4mPmqGPuJ5YZcZgHfXNuiUZLUCI",
+      duration: "Nov 2025 - Apr 2026",
       location: "Kyiv,Ukraine (Remote)",
       description: [
         "Contributed to Conar, an open-source database client by Wannabespace, focusing on major enhancements and feature development.",
